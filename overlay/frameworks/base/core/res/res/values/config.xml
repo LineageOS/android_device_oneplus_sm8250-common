@@ -269,6 +269,9 @@
     <!-- Is the device capable of hot swapping an ICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
+
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
