@@ -526,7 +526,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac \
-    libwfdaac_proprietary
+    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
