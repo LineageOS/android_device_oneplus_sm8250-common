@@ -89,20 +89,6 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # A/B
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    odm \
-    product \
-    recovery \
-    system \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vendor
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
