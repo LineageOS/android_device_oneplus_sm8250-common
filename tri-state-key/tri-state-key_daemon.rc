@@ -1,4 +1,7 @@
 on fs
+    chown system system /sys/bus/platform/devices/soc/soc\:tri_state_key/hall_data_calib
+    chown system system /mnt/vendor/persist/engineermode/tri_state_hall_data
+
     start tri-state-key_daemon
 
 service tri-state-key_daemon /vendor/bin/tri-state-key_daemon
