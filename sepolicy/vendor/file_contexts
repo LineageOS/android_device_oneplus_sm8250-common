@@ -89,6 +89,7 @@
 # Sys files (wakeup)
 /sys/devices/platform/soc/c440000\.qcom,spmi/spmi-0/spmi0-00/c440000\.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/soc:oneplus_wlchg/power_supply/wireless/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:tri_state_key/hall_data_calib u:object_r:sysfs_tri_state_key:s0
 /sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_aac/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_alac/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
