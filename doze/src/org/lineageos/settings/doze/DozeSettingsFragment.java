@@ -34,6 +34,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
@@ -48,7 +49,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     private SwitchPreference mAlwaysOnDisplayPreference;
 
-    private SwitchPreference mPickUpPreference;
+    private ListPreference mPickUpPreference;
     private SwitchPreference mPocketPreference;
 
     private Handler mHandler = new Handler();
@@ -77,7 +78,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         PreferenceCategory proximitySensorCategory = (PreferenceCategory) getPreferenceScreen().
                 findPreference(Utils.CATEG_PROX_SENSOR);
 
-        mPickUpPreference = (SwitchPreference) findPreference(Utils.GESTURE_PICK_UP_KEY);
+        mPickUpPreference = (ListPreference) findPreference(Utils.GESTURE_PICK_UP_KEY);
         mPickUpPreference.setEnabled(dozeEnabled);
         mPickUpPreference.setOnPreferenceChangeListener(this);
 
