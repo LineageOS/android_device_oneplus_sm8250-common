@@ -1,2 +1,0 @@
-# tri-state-key
-/system/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0

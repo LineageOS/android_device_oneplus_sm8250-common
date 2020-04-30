@@ -1,7 +1,8 @@
 # Binaries
-/(vendor|system/vendor)/bin/dashd          u:object_r:dashd_exec:s0
-/(vendor|system/vendor)/bin/opf-service    u:object_r:opf_exec:s0
-/(vendor|system/vendor)/bin/wlchgd         u:object_r:wlchgd_exec:s0
+/(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
+/(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
+/(vendor|system/vendor)/bin/tri-state-key_daemon    u:object_r:tri-state-key_daemon_exec:s0
+/(vendor|system/vendor)/bin/wlchgd                  u:object_r:wlchgd_exec:s0
 
 # Block devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/config             u:object_r:frp_block_device:s0

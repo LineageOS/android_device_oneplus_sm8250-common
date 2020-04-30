@@ -24,6 +24,7 @@ cc_binary {
         "-Wall",
         "-Werror",
     ],
+    vendor: true,
     shared_libs: [
         "libbase",
         "liblog",

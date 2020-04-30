@@ -1,5 +1,5 @@
-type tri-state-key_daemon, domain, coredomain;
-type tri-state-key_daemon_exec, system_file_type, exec_type, file_type;
+type tri-state-key_daemon, domain;
+type tri-state-key_daemon_exec, vendor_file_type, exec_type, file_type;
 
 init_daemon_domain(tri-state-key_daemon)
 
