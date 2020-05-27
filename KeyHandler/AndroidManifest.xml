@@ -17,4 +17,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
           package="org.lineageos.settings.device">
+    <uses-permission android:name="android.permission.VIBRATE" />
 </manifest>
