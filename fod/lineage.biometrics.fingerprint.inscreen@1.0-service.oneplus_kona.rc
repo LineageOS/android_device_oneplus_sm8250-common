@@ -1,0 +1,10 @@
+on init
+    chown system system /sys/class/drm/card0-DSI-1/op_friginer_print_hbm
+    chmod 0660 /sys/class/drm/card0-DSI-1/op_friginer_print_hbm
+
+service fingerprint-inscreen-1-0 /system/bin/hw/lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona
+    interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
+    class hal
+    user system
+    group system
+    shutdown critical
