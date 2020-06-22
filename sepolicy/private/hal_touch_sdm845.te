@@ -1,9 +1,0 @@
-type hal_touch_sdm845, coredomain, domain;
-hal_server_domain(hal_touch_sdm845, hal_lineage_touch)
-
-type hal_touch_sdm845_exec, system_file_type, exec_type, file_type;
-init_daemon_domain(hal_touch_sdm845)
-
-# Allow access to gesture enable nodes
-allow hal_touch_sdm845 proc_touchpanel:dir search;
-allow hal_touch_sdm845 proc_touchpanel:file rw_file_perms;

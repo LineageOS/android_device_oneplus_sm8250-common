@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.oneplus_sdm845",
+    name: "libgptutils.oneplus_kona",
     vendor: true,
     recovery_available: true,
     shared_libs: [

@@ -1,0 +1,9 @@
+type hal_touch_kona, coredomain, domain;
+hal_server_domain(hal_touch_kona, hal_lineage_touch)
+
+type hal_touch_kona_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_touch_kona)
+
+# Allow access to gesture enable nodes
+allow hal_touch_kona proc_touchpanel:dir search;
+allow hal_touch_kona proc_touchpanel:file rw_file_perms;
