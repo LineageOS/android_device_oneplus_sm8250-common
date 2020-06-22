@@ -56,10 +56,7 @@ static int rgbToBrightness(const LightState& state) {
 }
 
 Light::Light() {
-    mLights.emplace(Type::ATTENTION, std::bind(&Light::handleRgb, this, std::placeholders::_1, 0));
     mLights.emplace(Type::BACKLIGHT, std::bind(&Light::handleBacklight, this, std::placeholders::_1));
-    mLights.emplace(Type::BATTERY, std::bind(&Light::handleRgb, this, std::placeholders::_1, 2));
-    mLights.emplace(Type::NOTIFICATIONS, std::bind(&Light::handleRgb, this, std::placeholders::_1, 1));
 }
 
 void Light::handleBacklight(const LightState& state) {
@@ -72,89 +69,6 @@ void Light::handleBacklight(const LightState& state) {
     LOG(DEBUG) << "Writing backlight brightness " << brightness
                << " (orig " << sentBrightness << ")";
     set("/sys/class/backlight/panel0-backlight/brightness", brightness);
-}
-
-void Light::handleRgb(const LightState& state, size_t index) {
-    mLightStates.at(index) = state;
-
-    LightState stateToUse = mLightStates.front();
-    for (const auto& lightState : mLightStates) {
-        if (lightState.color & 0xffffff) {
-            stateToUse = lightState;
-            break;
-        }
-    }
-
-    std::map<std::string, int> colorValues;
-    colorValues["red"] = (stateToUse.color >> 16) & 0xff;
-    // lower green and blue brightness to adjust for the (lower) brightness of red
-    colorValues["green"] = ((stateToUse.color >> 8) & 0xff) / 2;
-    colorValues["blue"] = (stateToUse.color & 0xff) / 2;
-
-    int onMs = stateToUse.flashMode == Flash::TIMED ? stateToUse.flashOnMs : 0;
-    int offMs = stateToUse.flashMode == Flash::TIMED ? stateToUse.flashOffMs : 0;
-
-    // LUT has 63 entries, we could theoretically use them as 3 (colors) * 21 (steps).
-    // However, the last LUT entries don't seem to behave correctly for unknown
-    // reasons, so we use 17 steps for a total of 51 LUT entries only.
-    static constexpr int kRampSteps = 16;
-    static constexpr int kRampMaxStepDurationMs = 15;
-
-    auto makeLedPath = [](const std::string& led, const std::string& op) -> std::string {
-        return "/sys/class/leds/" + led + "/" + op;
-    };
-    auto getScaledDutyPercent = [](int brightness) -> std::string {
-        std::string output;
-        for (int i = 0; i <= kRampSteps; i++) {
-            if (i != 0) {
-                output += ",";
-            }
-            output += std::to_string(i * 512 * brightness / (255 * kRampSteps));
-        }
-        return output;
-    };
-
-    // Disable all blinking before starting
-    for (const auto& entry : colorValues) {
-        set(makeLedPath(entry.first, "blink"), 0);
-    }
-
-    if (onMs > 0 && offMs > 0) {
-        int pauseLo, pauseHi, stepDuration, index = 0;
-        if (kRampMaxStepDurationMs * kRampSteps > onMs) {
-            stepDuration = onMs / kRampSteps;
-            pauseHi = 0;
-            pauseLo = offMs;
-        } else {
-            stepDuration = kRampMaxStepDurationMs;
-            pauseHi = onMs - kRampSteps * stepDuration;
-            pauseLo = offMs - kRampSteps * stepDuration;
-        }
-
-        for (const auto& entry : colorValues) {
-            set(makeLedPath(entry.first, "lut_flags"), 95);
-            set(makeLedPath(entry.first, "start_idx"), index);
-            set(makeLedPath(entry.first, "duty_pcts"), getScaledDutyPercent(entry.second));
-            set(makeLedPath(entry.first, "pause_lo"), pauseLo);
-            set(makeLedPath(entry.first, "pause_hi"), pauseHi);
-            set(makeLedPath(entry.first, "ramp_step_ms"), stepDuration);
-            index += kRampSteps + 1;
-        }
-
-        // Start blinking
-        for (const auto& entry : colorValues) {
-            set(makeLedPath(entry.first, "blink"), entry.second);
-        }
-    } else {
-        for (const auto& entry : colorValues) {
-            set(makeLedPath(entry.first, "brightness"), entry.second);
-        }
-    }
-
-    LOG(DEBUG) << base::StringPrintf(
-        "handleRgb: mode=%d, color=%08X, onMs=%d, offMs=%d",
-        static_cast<std::underlying_type<Flash>::type>(stateToUse.flashMode), stateToUse.color,
-        onMs, offMs);
 }
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
