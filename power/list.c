@@ -31,20 +31,23 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <utils/Log.h>
 #include "list.h"
+#include <utils/Log.h>
 
-int init_list_head(struct list_node* head) {
-    if (head == NULL) return -1;
+int init_list_head(struct list_node *head)
+{
+    if (head == NULL)
+        return -1;
 
     memset(head, 0, sizeof(*head));
 
     return 0;
 }
 
-struct list_node* add_list_node(struct list_node* head, void* data) {
+struct list_node *add_list_node(struct list_node *head, void *data)
+{
     /* Create a new list_node. And put 'data' into it. */
-    struct list_node* new_node;
+    struct list_node *new_node;
 
     if (head == NULL) {
         return NULL;
@@ -63,16 +66,18 @@ struct list_node* add_list_node(struct list_node* head, void* data) {
     return new_node;
 }
 
-int is_list_empty(struct list_node* head) {
+int is_list_empty(struct list_node *head)
+{
     return (head == NULL || head->next == NULL);
 }
 
 /*
  * Delink and de-allocate 'node'.
  */
-int remove_list_node(struct list_node* head, struct list_node* del_node) {
-    struct list_node* current_node;
-    struct list_node* saved_node;
+int remove_list_node(struct list_node *head, struct list_node *del_node)
+{
+    struct list_node *current_node;
+    struct list_node *saved_node;
 
     if (head == NULL || head->next == NULL) {
         return -1;
@@ -102,12 +107,14 @@ int remove_list_node(struct list_node* head, struct list_node* del_node) {
     return 0;
 }
 
-void dump_list(struct list_node* head) {
-    struct list_node* current_node = head;
+void dump_list(struct list_node *head)
+{
+    struct list_node *current_node = head;
 
-    if (head == NULL) return;
+    if (head == NULL)
+        return;
 
-    ALOGV("List:\n");
+    printf("List:\n");
 
     while ((current_node = current_node->next)) {
         if (current_node->dump) {
@@ -116,14 +123,17 @@ void dump_list(struct list_node* head) {
     }
 }
 
-struct list_node* find_node(struct list_node* head, void* comparison_data) {
-    struct list_node* current_node = head;
+struct list_node *find_node(struct list_node *head, void *comparison_data)
+{
+    struct list_node *current_node = head;
 
-    if (head == NULL) return NULL;
+    if (head == NULL)
+        return NULL;
 
     while ((current_node = current_node->next)) {
         if (current_node->compare) {
-            if (current_node->compare(current_node->data, comparison_data) == 0) {
+            if (current_node->compare(current_node->data,
+                    comparison_data) == 0) {
                 /* Match found. Return current_node. */
                 return current_node;
             }

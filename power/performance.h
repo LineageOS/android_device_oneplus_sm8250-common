@@ -31,31 +31,15 @@
 extern "C" {
 #endif
 
-#define FAILED -1
-#define SUCCESS 0
-#define INDEFINITE_DURATION 0
+#define FAILED                  -1
+#define SUCCESS                 0
+#define INDEFINITE_DURATION     0
 
 /* Hints sent to perf HAL from power HAL
  * These have to be kept in sync with Perf HAL side definitions
  */
-#define VENDOR_HINT_DISPLAY_OFF 0x00001040
-#define VENDOR_HINT_DISPLAY_ON 0x00001041
-
-#define VENDOR_HINT_FIRST_LAUNCH_BOOST 0x00001081
-#define VENDOR_HINT_SCROLL_BOOST 0x00001080
-
-enum {
-    LAUNCH_BOOST_V1 = 1,
-    LAUNCH_BOOST_V2 = 2,
-    LAUNCH_BOOST_V3 = 3
-};
-
-enum {
-    SCROLL_VERTICAL = 1,
-    SCROLL_HORIZONTAL = 2,
-    SCROLL_PANEL_VIEW = 3,
-    SCROLL_PREFILING = 4
-};
+#define VENDOR_HINT_DISPLAY_OFF      0x00001040
+#define VENDOR_HINT_DISPLAY_ON       0x00001041
 
 enum SCREEN_DISPLAY_TYPE {
     DISPLAY_OFF = 0x00FF,

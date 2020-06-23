@@ -28,43 +28,55 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "metadata-defs.h"
 
-int parse_metadata(char* metadata, char** metadata_saveptr, char* attribute,
-                   unsigned int attribute_size, char* value, unsigned int value_size) {
-    char* attribute_string;
-    char* attribute_value_delim;
+int parse_metadata(char *metadata, char **metadata_saveptr,
+        char *attribute, int attribute_size, char *value, int value_size)
+{
+    char *attribute_string;
+    char *attribute_value_delim;
     unsigned int bytes_to_copy;
 
-    attribute_string = strtok_r(metadata, ATTRIBUTE_STRING_DELIM, metadata_saveptr);
+    attribute_string = strtok_r(metadata, ATTRIBUTE_STRING_DELIM,
+            metadata_saveptr);
 
-    if (attribute_string == NULL) return METADATA_PARSING_DONE;
+    if (attribute_string == NULL)
+        return METADATA_PARSING_DONE;
 
     attribute[0] = value[0] = '\0';
 
-    if ((attribute_value_delim = strchr(attribute_string, ATTRIBUTE_VALUE_DELIM)) != NULL) {
-        unsigned int attribute_len = (unsigned int)(attribute_value_delim - attribute_string);
-        /* copy only attribute len + NUL character, or as much as can be fit */
-        bytes_to_copy = MIN(attribute_len + 1, attribute_size);
+    if ((attribute_value_delim = strchr(attribute_string,
+                    ATTRIBUTE_VALUE_DELIM)) != NULL) {
+        bytes_to_copy = MIN((attribute_value_delim - attribute_string),
+                attribute_size - 1);
+        /* Replace strncpy with strlcpy
+         * Add +1 to bytes_to_copy as strlcpy copies size-1 bytes */
+        strlcpy(attribute, attribute_string,
+                bytes_to_copy+1);
 
-        strlcpy(attribute, attribute_string, bytes_to_copy);
-        strlcpy(value, attribute_value_delim + 1, value_size);
+        bytes_to_copy = MIN(strlen(attribute_string) - strlen(attribute) - 1,
+                value_size - 1);
+        /* Replace strncpy with strlcpy
+         * Add +1 to bytes_to_copy as strlcpy copies size-1 bytes */
+        strlcpy(value, attribute_value_delim + 1,
+                bytes_to_copy+1);
     }
 
     return METADATA_PARSING_CONTINUE;
 }
 
-int parse_video_encode_metadata(char* metadata,
-                                struct video_encode_metadata_t* video_encode_metadata) {
+int parse_video_encode_metadata(char *metadata,
+    struct video_encode_metadata_t *video_encode_metadata)
+{
     char attribute[1024], value[1024], *saveptr;
-    char* temp_metadata = metadata;
+    char *temp_metadata = metadata;
     int parsing_status;
 
-    while ((parsing_status = parse_metadata(temp_metadata, &saveptr, attribute, sizeof(attribute),
-                                            value, sizeof(value))) == METADATA_PARSING_CONTINUE) {
+    while ((parsing_status = parse_metadata(temp_metadata, &saveptr,
+            attribute, sizeof(attribute), value, sizeof(value))) == METADATA_PARSING_CONTINUE) {
         if (strlen(attribute) == strlen("hint_id") &&
             (strncmp(attribute, "hint_id", strlen("hint_id")) == 0)) {
             if (strlen(value) > 0) {
@@ -82,19 +94,21 @@ int parse_video_encode_metadata(char* metadata,
         temp_metadata = NULL;
     }
 
-    if (parsing_status == METADATA_PARSING_ERR) return -1;
+    if (parsing_status == METADATA_PARSING_ERR)
+        return -1;
 
     return 0;
 }
 
-int parse_video_decode_metadata(char* metadata,
-                                struct video_decode_metadata_t* video_decode_metadata) {
+int parse_video_decode_metadata(char *metadata,
+    struct video_decode_metadata_t *video_decode_metadata)
+{
     char attribute[1024], value[1024], *saveptr;
-    char* temp_metadata = metadata;
+    char *temp_metadata = metadata;
     int parsing_status;
 
-    while ((parsing_status = parse_metadata(temp_metadata, &saveptr, attribute, sizeof(attribute),
-                                            value, sizeof(value))) == METADATA_PARSING_CONTINUE) {
+    while ((parsing_status = parse_metadata(temp_metadata, &saveptr,
+            attribute, sizeof(attribute), value, sizeof(value))) == METADATA_PARSING_CONTINUE) {
         if (strlen(attribute) == strlen("hint_id") &&
             (strncmp(attribute, "hint_id", strlen("hint_id")) == 0)) {
             if (strlen(value) > 0) {
@@ -112,7 +126,8 @@ int parse_video_decode_metadata(char* metadata,
         temp_metadata = NULL;
     }
 
-    if (parsing_status == METADATA_PARSING_ERR) return -1;
+    if (parsing_status == METADATA_PARSING_ERR)
+        return -1;
 
     return 0;
 }
