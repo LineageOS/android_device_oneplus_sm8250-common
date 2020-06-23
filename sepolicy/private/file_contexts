@@ -1,9 +1,6 @@
 # Data files
 /data/misc/display(/.*)?      u:object_r:display_misc_file:s0
 
-# Devices
-/dev/dri/card0    u:object_r:graphics_device:s0
-
 # Files in rootfs
 /op1(/.*)?       u:object_r:op1_file:s0
 /op2(/.*)?       u:object_r:op2_file:s0

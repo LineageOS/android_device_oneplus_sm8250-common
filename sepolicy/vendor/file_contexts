@@ -1,3 +1,9 @@
+# graphics device
+/dev/mdss_rotator                               u:object_r:graphics_device:s0
+/dev/dri/card0                                  u:object_r:graphics_device:s0
+/dev/dri/controlD64                             u:object_r:graphics_device:s0
+/dev/dri/renderD128                             u:object_r:graphics_device:s0
+
 # UFS Devices
 /dev/block/platform/soc/1d84000\.ufshc/by-name/system                u:object_r:system_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/vendor                u:object_r:system_block_device:s0
