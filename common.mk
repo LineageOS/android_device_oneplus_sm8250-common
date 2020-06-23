@@ -32,9 +32,6 @@ PRODUCT_PACKAGES += \
     OnePlusIconShapeSquircleOverlay \
     OnePlusIconShapeTeardropOverlay
 
-# Properties
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 
