@@ -4,7 +4,6 @@
 # Files in rootfs
 /op1(/.*)?       u:object_r:op1_file:s0
 /op2(/.*)?       u:object_r:op2_file:s0
-/op_odm(/.*)?    u:object_r:system_file:s0
 
 # Files in sysfs
 /sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
