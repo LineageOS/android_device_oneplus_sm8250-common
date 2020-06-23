@@ -1,0 +1,12 @@
+type custom_ab_block_device, dev_type;
+type efs_boot_dev, dev_type;
+type gpt_block_device, dev_type;
+type limits_block_device, dev_type;
+type mdtp_device, dev_type;
+type modem_block_device, dev_type;
+type modem_efs_partition_device, dev_type;
+type persist_block_device, dev_type;
+type rpmb_device, dev_type;
+type ssd_block_device, dev_type;
+type uefi_block_device, dev_type;
+type xbl_block_device, dev_type;

@@ -1,0 +1,12 @@
+recovery_only(`
+allow fastbootd {
+        custom_ab_block_device
+        recovery_block_device
+        xbl_block_device
+        uefi_block_device
+        modem_block_device
+        mdtp_device
+}:blk_file { rw_file_perms };
+')
+
+allow fastbootd tmpfs:lnk_file { getattr read };
