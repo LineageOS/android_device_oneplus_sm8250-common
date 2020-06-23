@@ -34,12 +34,12 @@ product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 
 # HotwordEnrollment
--priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
--priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
+-priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
 # IMS
-lib64/libdiag_system.so
--product/priv-app/ims/ims.apk|4161acfa23df5ed8c095754e325f48d0f6968c6e
+-product/priv-app/ims/ims.apk|1e781720d5a93134bfd65830ffbaf42e19e17641
+product/lib64/libdiag_system.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so
@@ -55,15 +55,6 @@ lib/libmmparser_lite.so
 lib/libOmxMux.so
 lib64/libmmosal.so
 
-# NFC
--app/NxpNfcNci/NxpNfcNci.apk|683f26e17a1e3547a821925e8a212720cb4992f6
--app/NxpSecureElement/NxpSecureElement.apk
-etc/nfcee_access.xml|6621fa1927720008fc0bdf47d259b18c871c2c79
-etc/permissions/com.nxp.nfc.xml
-framework/com.nxp.nfc.jar
-lib64/libnxpnfc_nci_jni.so
-lib64/libnxpnfc-nci.so
-
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qti_libpermissions.xml
@@ -72,7 +63,6 @@ etc/sysconfig/qti_whitelist.xml
 -framework/qcnvitems.jar
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
 product/etc/permissions/qcrilhook.xml
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
