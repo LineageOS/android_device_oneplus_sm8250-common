@@ -47,7 +47,6 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
-    odm \
     product \
     recovery \
     system \
