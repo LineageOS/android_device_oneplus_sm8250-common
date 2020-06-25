@@ -44,8 +44,8 @@ class DisplayModes : public IDisplayModes {
 
   private:
     struct ModeInfo {
-        const char* name;
-        const char* value;
+        std::string name;
+        std::string node;
     };
     static const std::map<int32_t, ModeInfo> kModeMap;
     int32_t mDefaultModeId;

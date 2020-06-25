@@ -20,4 +20,7 @@ allow hal_livedisplay_kona display_misc_file:dir rw_dir_perms;
 allow hal_livedisplay_kona display_misc_file:file create_file_perms;
 
 # Grant access over LiveDisplay tuneables
-allow hal_livedisplay_kona sysfs_livedisplay_tuneable:file rw_file_perms;
+allow hal_livedisplay_kona { sysfs_livedisplay_tuneable sysfs_oem }:file rw_file_perms;
+
+# Allow hal_livedisplay_kona to set config_prop
+set_prop(hal_livedisplay_kona, config_prop)

@@ -1,8 +1,18 @@
 on init
-    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
-    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
-    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
-    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
+    chown system graphics /sys/class/drm/card0-DSI-1/DCI_P3
+    chown system graphics /sys/class/drm/card0-DSI-1/hbm
+    chown system graphics /sys/class/drm/card0-DSI-1/night_mode
+    chown system graphics /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode
+    chown system graphics /sys/class/drm/card0-DSI-1/native_display_p3_mode
+    chown system graphics /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
+    chown system graphics /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/DCI_P3
+    chmod 0666 /sys/class/drm/card0-DSI-1/hbm
+    chmod 0666 /sys/class/drm/card0-DSI-1/night_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_p3_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
 
 on post-fs-data
     mkdir /data/misc/display 0770 system graphics
@@ -11,3 +21,13 @@ service livedisplay-hal-2-0 /system/bin/hw/lineage.livedisplay@2.0-service.onepl
     class hal
     user system
     group system
+
+on property:sys.boot_completed=1
+    write /sys/class/drm/card0-DSI-1/DCI_P3 0
+    write /sys/class/drm/card0-DSI-1/hbm 0
+    write /sys/class/drm/card0-DSI-1/night_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+    write /sys/class/drm/card0-DSI-1/${sys.display.mode} 1
