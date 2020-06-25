@@ -14,18 +14,14 @@
  * limitations under the License.
  */
 
-#include <dlfcn.h>
-
 #define LOG_TAG "lineage.livedisplay@2.0-service.oneplus_kona"
-
-#define SDM_DISP_LIB "libsdm-disp-apis.qti.so"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
+#include <livedisplay/sdm/PictureAdjustment.h>
 
 #include "DisplayModes.h"
-#include "PictureAdjustment.h"
 #include "SunlightEnhancement.h"
 
 using android::OK;
@@ -38,53 +34,21 @@ using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
 using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::implementation::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
+using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 
 int main() {
-    // Vendor backend
-    void* libHandle = nullptr;
-    const char* libName = nullptr;
-    int32_t (*disp_api_init)(uint64_t*, uint32_t) = nullptr;
-    int32_t (*disp_api_deinit)(uint64_t, uint32_t) = nullptr;
-    uint64_t cookie = 0;
-
-    // HIDL frontend
-    sp<DisplayModes> dm;
-    sp<PictureAdjustment> pa;
-    sp<SunlightEnhancement> se;
-
     status_t status = OK;
 
     android::ProcessState::initWithDriver("/dev/binder");
 
     LOG(INFO) << "LiveDisplay HAL service is starting.";
 
-    libHandle = dlopen(SDM_DISP_LIB, RTLD_NOW);
-    if (libHandle == nullptr) {
-        LOG(ERROR) << "Failed to load SDM display lib, exiting.";
-        goto shutdown;
-    }
-
-    disp_api_init =
-            reinterpret_cast<int32_t (*)(uint64_t*, uint32_t)>(dlsym(libHandle, "disp_api_init"));
-    if (disp_api_init == nullptr) {
-        LOG(ERROR) << "Can not get disp_api_init from " << libName << " (" << dlerror() << ")";
-        goto shutdown;
-    }
-
-    disp_api_deinit =
-            reinterpret_cast<int32_t (*)(uint64_t, uint32_t)>(dlsym(libHandle, "disp_api_deinit"));
-    if (disp_api_deinit == nullptr) {
-        LOG(ERROR) << "Can not get disp_api_deinit from " << libName << " (" << dlerror() << ")";
-        goto shutdown;
-    }
-
-    status = disp_api_init(&cookie, 0);
-    if (status != OK) {
-        LOG(ERROR) << "Can not initialize " << libName << " (" << status << ")";
-        goto shutdown;
-    }
+    std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
+    sp<DisplayModes> dm;
+    sp<PictureAdjustment> pa;
+    sp<SunlightEnhancement> se;
 
     dm = new DisplayModes();
     if (dm == nullptr) {
@@ -92,7 +56,7 @@ int main() {
         goto shutdown;
     }
 
-    pa = new PictureAdjustment(libHandle, cookie);
+    pa = new PictureAdjustment(controller);
     if (pa == nullptr) {
         LOG(ERROR) << "Can not create an instance of LiveDisplay HAL PictureAdjustment Iface, "
                       "exiting.";
@@ -106,11 +70,6 @@ int main() {
         goto shutdown;
     }
 
-    if (!pa->isSupported()) {
-        // Backend isn't ready yet, so restart and try again
-        goto shutdown;
-    }
-
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     status = dm->registerAsService();
@@ -120,13 +79,11 @@ int main() {
         goto shutdown;
     }
 
-    if (pa->isSupported()) {
-        status = pa->registerAsService();
-        if (status != OK) {
-            LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
-                       << status << ")";
-            goto shutdown;
-        }
+    status = pa->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
     status = se->registerAsService();
@@ -141,15 +98,6 @@ int main() {
     // Should not pass this line
 
 shutdown:
-    // Cleanup what we started
-    if (disp_api_deinit != nullptr) {
-        disp_api_deinit(cookie, 0);
-    }
-
-    if (libHandle != nullptr) {
-        dlclose(libHandle);
-    }
-
     // In normal operation, we don't expect the thread pool to shutdown
     LOG(ERROR) << "LiveDisplay HAL service is shutting down.";
     return 1;
