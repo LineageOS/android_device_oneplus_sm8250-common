@@ -20,6 +20,7 @@ cc_binary {
     relative_install_path: "hw",
     srcs: [
         "DisplayModes.cpp",
+        "PictureAdjustment.cpp",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],

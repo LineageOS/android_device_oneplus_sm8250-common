@@ -13,6 +13,10 @@ product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 # DASH
 sbin/dashd:bin/dashd
 
+# Display
+product/lib64/libsdm-disp-apis.qti.so
+product/lib64/vendor.display.color@1.0.so
+
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd
