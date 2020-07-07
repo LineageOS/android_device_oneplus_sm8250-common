@@ -1,0 +1,4 @@
+service powershare-hal-1-0 /system/bin/hw/lineage.powershare@1.0-service.oneplus_kona
+    class hal
+    user system
+    group system

@@ -168,6 +168,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.oneplus_kona
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    lineage.powershare@1.0-service.oneplus_kona
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
