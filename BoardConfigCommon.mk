@@ -16,8 +16,6 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-BOARD_VENDOR := oneplus
-
 COMMON_PATH := device/oneplus/sm8250-common
 
 # Architecture
