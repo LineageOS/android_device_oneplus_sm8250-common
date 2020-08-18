@@ -1,11 +1,11 @@
-type vendor_cwb_prop, property_type;
-type vendor_db_security_prop, property_type;
-type vendor_fingerprint_prop, property_type;
-type vendor_gps_prop, property_type;
-type vendor_memplus_prop, property_type;
-type vendor_nfc_prop, property_type;
-type vendor_oem_bluetooth_prop, property_type;
-type vendor_oem_wifi_prop, property_type;
-type vendor_rild_prop, property_type;
-type vendor_set_wlan_prop, property_type;
-type vendor_shell_prop, property_type;
+vendor_internal_prop(vendor_cwb_prop)
+vendor_internal_prop(vendor_db_security_prop)
+vendor_internal_prop(vendor_fingerprint_prop)
+vendor_internal_prop(vendor_gps_prop)
+vendor_internal_prop(vendor_memplus_prop)
+vendor_internal_prop(vendor_nfc_prop)
+vendor_internal_prop(vendor_oem_bluetooth_prop)
+vendor_internal_prop(vendor_oem_wifi_prop)
+vendor_internal_prop(vendor_rild_prop)
+vendor_internal_prop(vendor_set_wlan_prop)
+vendor_internal_prop(vendor_shell_prop)
