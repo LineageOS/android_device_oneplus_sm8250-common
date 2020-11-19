@@ -11,10 +11,5 @@ on boot
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
-service dashd /system/bin/dashd
-    class core
-    critical
-    group root system
-
 service vendor.secure_element_hal_service /system/bin/true
     disabled

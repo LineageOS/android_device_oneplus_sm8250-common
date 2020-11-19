@@ -15,9 +15,6 @@
 /system/bin/hw/lineage\.powershare@1\.0-service\.oneplus_kona    u:object_r:hal_powershare_kona_exec:s0
 /system/bin/hw/lineage\.touch@1\.0-service\.oneplus_kona    u:object_r:hal_touch_kona_exec:s0
 
-# DASH
-/system/bin/dashd    u:object_r:dashd_exec:s0
-
 # tri-state-key
 /system/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0
 
