@@ -4,13 +4,13 @@ hal_server_domain(hal_livedisplay_kona, hal_lineage_livedisplay)
 type hal_livedisplay_kona_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_livedisplay_kona)
 
-# Allow hal_livedisplay_kona to find hal_display_color_hwservice
-type hal_display_color_hwservice, hwservice_manager_type;
-allow hal_livedisplay_kona hal_display_color_hwservice:hwservice_manager find;
+# Allow hal_livedisplay_kona to find vendor_hal_display_color_hwservice
+type vendor_hal_display_color_hwservice, hwservice_manager_type;
+allow hal_livedisplay_kona vendor_hal_display_color_hwservice:hwservice_manager find;
 
-# Allow binder communication with hal_display_color_default
-type hal_display_color_default, domain;
-binder_call(hal_livedisplay_kona, hal_display_color_default)
+# Allow binder communication with vendor_hal_display_color_default
+type vendor_hal_display_color_default, domain;
+binder_call(hal_livedisplay_kona, vendor_hal_display_color_default)
 
 # Allow hal_livedisplay_kona to use binder service
 binder_use(hal_livedisplay_kona)
