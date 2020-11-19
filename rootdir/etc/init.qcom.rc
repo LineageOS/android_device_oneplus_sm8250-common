@@ -1,3 +1,6 @@
+on post-fs
+    mount none /odm/lost+found /odm/overlay bind
+
 on boot
     # Fingerprint
     chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state

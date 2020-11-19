@@ -1,6 +1,9 @@
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
 
+# Allow init to mount vendor overlays
+allow init vendor_overlay_file:dir mounton;
+
 # Allow init to chown/chmod on pseudo files in /sys
 allow init {
     sysfs_fod
