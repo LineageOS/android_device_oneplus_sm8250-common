@@ -169,7 +169,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.oneplus_kona
+    android.hardware.power-service.oneplus_kona
 
 # PowerShare
 PRODUCT_PACKAGES += \
