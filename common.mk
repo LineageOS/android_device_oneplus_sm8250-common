@@ -164,6 +164,13 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk.oneplus_kona
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk.oneplus_kona
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.oneplus_kona

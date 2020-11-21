@@ -39,7 +39,7 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
 # IMS
--system_ext/priv-app/ims/ims.apk|af157d4abd37cd24a628dad77ecb1ca258f1345c
+-system_ext/priv-app/ims/ims.apk
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -56,7 +56,7 @@ system_ext/lib64/libmmosal.so
 
 # NFC
 system/etc/nfcee_access.xml
--system_ext/app/NQNfcNci/NQNfcNci.apk|c9e0c8e3251adf399036b61cf2b686c06dabc03f
+-system_ext/app/NQNfcNci/NQNfcNci.apk
 system_ext/etc/permissions/com.nxp.nfc.nq.xml
 system_ext/framework/com.nxp.nfc.nq.jar
 system_ext/lib64/libnqnfc-nci.so
