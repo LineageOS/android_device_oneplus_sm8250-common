@@ -1,0 +1,6 @@
+type vendor_qmipriod, domain;
+
+userdebug_or_eng(`
+  allow vendor_qmipriod vendor_qmipriod_data_file:dir rw_dir_perms;
+  allow vendor_qmipriod vendor_qmipriod_data_file:file create_file_perms;
+')
