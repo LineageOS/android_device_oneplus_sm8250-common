@@ -1,3 +1,6 @@
+# Devices
+/dev/smcinvoke    u:object_r:tee_device:s0
+
 # Data files
 /data/misc/display(/.*)?      u:object_r:display_misc_file:s0
 
