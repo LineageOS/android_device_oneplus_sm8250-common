@@ -1,0 +1,40 @@
+on post-fs-data
+    chmod 0666 /dev/block/sda6
+    chmod 0666 /dev/param
+
+service wcnss-service-f /system/bin/wcnss_service -f
+    class main
+    user root
+    group system wifi radio
+    oneshot
+    disabled
+
+service factory /vendor/bin/factory
+    class late_start
+    disabled
+
+service ftm_power_config /vendor/bin/sh /vendor/etc/init/hw/ftm_power_config.sh
+    class late_start
+    user root
+    disabled
+    oneshot
+
+on oem_ftm
+    chmod 0666  /sys/module/sysctl/parameters/oem_en_chg_prk_lv
+    chmod 0666  /sys/class/drm/card0-DSI-1/panel_serial_number_AT
+    chown system system /vendor/bin/factory
+    chmod 0755  /vendor/bin/factory
+    chown system system /vendor/bin/ptt_socket_app
+    chmod 0755  /vendor/bin/ptt_socket_app
+    write /sys/class/power_supply/battery/charging_enabled 0
+    start qcom-sh
+    start vendor.qmuxd
+    start ptt_ffbm
+    start ftm_power_config
+    start cnss-daemon
+    start qcom-c_main-sh
+    write /dev/kmsg "factory boot mode is:${ro.vendor.factory.mode}"
+    start vendor.mdm_launcher
+
+on property:ro.vendor.factory.mode=ftm
+    start factory
