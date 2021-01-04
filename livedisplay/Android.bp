@@ -14,8 +14,8 @@
 // limitations under the License.
 
 cc_binary {
-    name: "lineage.livedisplay@2.0-service.oneplus_kona",
-    init_rc: ["lineage.livedisplay@2.0-service.oneplus_kona.rc"],
+    name: "vendor.lineage.livedisplay@2.0-service.oneplus_kona",
+    init_rc: ["vendor.lineage.livedisplay@2.0-service.oneplus_kona.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -35,5 +35,5 @@ cc_binary {
     header_libs: [
         "vendor.lineage.livedisplay@2.0-sdm-headers",
     ],
-    cflags: ["-DLIVES_IN_SYSTEM"],
+    proprietary: true,
 }

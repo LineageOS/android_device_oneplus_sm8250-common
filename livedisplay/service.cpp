@@ -41,7 +41,7 @@ using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 int main() {
     status_t status = OK;
 
-    android::ProcessState::initWithDriver("/dev/binder");
+    android::ProcessState::initWithDriver("/dev/vndbinder");
 
     LOG(INFO) << "LiveDisplay HAL service is starting.";
 

@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.oneplus_kona \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona \
     vendor.oneplus.fingerprint.extension@1.0 \
     vendor.oneplus.hardware.display@1.0
 
@@ -169,7 +169,7 @@ PRODUCT_COPY_FILES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.oneplus_kona
+    vendor.lineage.livedisplay@2.0-service.oneplus_kona
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -207,7 +207,7 @@ PRODUCT_PACKAGES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    lineage.powershare@1.0-service.oneplus_kona
+    vendor.lineage.powershare@1.0-service.oneplus_kona
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -240,7 +240,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.oneplus_kona
+    vendor.lineage.touch@1.0-service.oneplus_kona
 
 # tri-state-key
 PRODUCT_PACKAGES += \

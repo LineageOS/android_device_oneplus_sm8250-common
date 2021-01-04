@@ -29,9 +29,9 @@ namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
 
-static constexpr const char* kDisplayModeProp = "sys.display.mode";
+static constexpr const char* kDisplayModeProp = "vendor.display.mode";
 static const std::string kModeBasePath = "/sys/class/drm/card0-DSI-1/";
-static const std::string kDefaultPath = "/data/misc/display/default_display_mode";
+static const std::string kDefaultPath = "/data/vendor/display/default_display_mode";
 
 const std::map<int32_t, DisplayModes::ModeInfo> DisplayModes::kModeMap = {
     {0, {"Standard", "default"}},

@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "lineage.powershare@1.0-service.oneplus_kona",
-    init_rc: ["lineage.powershare@1.0-service.oneplus_kona.rc"],
+    name: "vendor.lineage.powershare@1.0-service.oneplus_kona",
+    init_rc: ["vendor.lineage.powershare@1.0-service.oneplus_kona.rc"],
     srcs: ["service.cpp", "PowerShare.cpp"],
     shared_libs: [
         "libbase",
@@ -27,4 +27,5 @@ cc_binary {
         "libutils",
         "vendor.lineage.powershare@1.0",
     ],
+    proprietary: true,
 }
