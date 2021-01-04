@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Included>
+    <Decoders>
+        <MediaCodec name="c2.nokia.ozoaudio.decoder" type="audio/ozoaudio">
+            <Limit name="channel-count" max="8" />
+            <Limit name="sample-rate" ranges="48000" />
+            <Limit name="bitrate" range="8000-960000" />
+        </MediaCodec>
+    </Decoders>
+
+    <Encoders>
+        <MediaCodec name="c2.nokia.ozoaudio.encoder" type="audio/ozoaudio">
+            <Limit name="sample-rate" ranges="48000" />
+            <Limit name="bitrate" range="128000-960000" />
+        </MediaCodec>
+    </Encoders>
+</Included>
+

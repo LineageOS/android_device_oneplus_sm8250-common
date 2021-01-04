@@ -31,7 +31,7 @@ vendor.iop.enable_prefetch_ofr=1
 vendor.iop.enable_uxe=0
 
 # Media
-media.settings.xml=/system/etc/media_profiles_vendor.xml
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
