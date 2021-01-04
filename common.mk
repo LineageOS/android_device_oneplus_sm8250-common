@@ -203,7 +203,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.oneplus_kona
+    android.hardware.power-service-qti
 
 # PowerShare
 PRODUCT_PACKAGES += \
