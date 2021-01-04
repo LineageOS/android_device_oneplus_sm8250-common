@@ -262,7 +262,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oneplus_kona
+    vendor.qti.hardware.vibrator.service
 
 # WiFi
 PRODUCT_PACKAGES += \
