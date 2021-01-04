@@ -186,6 +186,9 @@ debug.stagefright.omx_default_rank=0
 # NFC
 ro.camera.notify_nfc=1
 
+# OTG
+persist.sys.oem.otg_support=true
+
 # PASR
 vendor.power.pasr.enabled=false
 
