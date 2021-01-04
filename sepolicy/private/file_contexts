@@ -1,28 +1,2 @@
-# Devices
-/dev/smcinvoke    u:object_r:tee_device:s0
-
-# Data files
-/data/misc/display(/.*)?      u:object_r:display_misc_file:s0
-
-# Files in rootfs
-/op1(/.*)?       u:object_r:op1_file:s0
-/op2(/.*)?       u:object_r:op2_file:s0
-
-# Files in sysfs
-/sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
-
-# HALs
-/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.power-service    u:object_r:hal_power_default_exec:s0
-/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/vendor\.qti\.hardware\.vibrator\.service    u:object_r:hal_vibrator_default_exec:s0
-/system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_kona    u:object_r:hal_fod_kona_exec:s0
-/system/bin/hw/lineage\.livedisplay@2\.0-service\.oneplus_kona    u:object_r:hal_livedisplay_kona_exec:s0
-/system/bin/hw/lineage\.powershare@1\.0-service\.oneplus_kona    u:object_r:hal_powershare_kona_exec:s0
-/system/bin/hw/lineage\.touch@1\.0-service\.oneplus_kona    u:object_r:hal_touch_kona_exec:s0
-
 # tri-state-key
 /system/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0
-
-# Vendor overlay
-/(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?        u:object_r:vendor_configs_file:s0
-/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/hw      u:object_r:vendor_hal_file:s0
-/(product|system/product)/vendor_overlay/[0-9]+/overlay(/.*)?    u:object_r:vendor_overlay_file:s0

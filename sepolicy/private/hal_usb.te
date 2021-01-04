@@ -1,2 +1,0 @@
-# Allow hal_usb to read and write to sysfs_oem
-allow hal_usb sysfs_oem:file rw_file_perms;

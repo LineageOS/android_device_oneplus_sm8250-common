@@ -1,3 +1,0 @@
-attribute hal_display;
-attribute hal_display_client;
-attribute hal_display_server;

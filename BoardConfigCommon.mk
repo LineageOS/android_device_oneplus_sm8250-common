@@ -143,14 +143,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
-# Root
-BOARD_ROOT_EXTRA_FOLDERS := op1 op2
-
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
