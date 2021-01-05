@@ -1,0 +1,23 @@
+# files
+type oem_file, file_type;
+type op1_file, file_type;
+type op2_file, file_type;
+type opf_file, file_type;
+
+# procfs
+type proc_direct_swappiness, fs_type, proc_type;
+type proc_swappiness, fs_type, proc_type;
+type proc_touchpanel, fs_type, proc_type;
+type proc_watermark_boost_factor, fs_type, proc_type;
+type procfs_oem_wireless, fs_type, proc_type;
+
+# sysfs
+type sysfs_dash_charger, fs_type, proc_type, sysfs_type;
+type sysfs_dbg, fs_type, sysfs_type;
+type sysfs_fod, fs_type, sysfs_type;
+type sysfs_fsc, fs_type, sysfs_type;
+type sysfs_fuse, fs_type, sysfs_type;
+type sysfs_memplus, fs_type, sysfs_type;
+type sysfs_project_info, fs_type, sysfs_type;
+type sysfs_tpd, fs_type, sysfs_type;
+type vendor_sysfs_video_call_on, fs_type, sysfs_type;

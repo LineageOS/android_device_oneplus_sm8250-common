@@ -1,0 +1,4 @@
+binder_call(hal_cameraHIDL_client, hal_cameraHIDL_server)
+binder_call(hal_cameraHIDL_server, hal_cameraHIDL_client)
+
+hal_attribute_hwservice(hal_cameraHIDL, hal_cameraHIDL_hwservice)

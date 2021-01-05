@@ -1,0 +1,11 @@
+type vendor_cwb_prop, property_type;
+type vendor_db_security_prop, property_type;
+type vendor_fingerprint_prop, property_type;
+type vendor_gps_prop, property_type;
+type vendor_memplus_prop, property_type;
+type vendor_nfc_prop, property_type;
+type vendor_oem_bluetooth_prop, property_type;
+type vendor_oem_wifi_prop, property_type;
+type vendor_rild_prop, property_type;
+type vendor_set_wlan_prop, property_type;
+type vendor_shell_prop, property_type;

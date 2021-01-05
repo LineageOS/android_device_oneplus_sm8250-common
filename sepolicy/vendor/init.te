@@ -1,0 +1,1 @@
+allow hal_hdcpkey_default param_block_device:blk_file rw_file_perms;

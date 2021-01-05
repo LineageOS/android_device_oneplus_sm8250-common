@@ -1,0 +1,7 @@
+type hal_hdcpkey_default, domain;
+hal_server_domain(hal_hdcpkey_default, hal_hdcpkey)
+
+type hal_hdcpkey_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_hdcpkey_default)
+
+allow hal_hdcpkey_default param_block_device:blk_file rw_file_perms;

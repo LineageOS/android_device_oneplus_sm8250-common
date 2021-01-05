@@ -1,0 +1,14 @@
+allow vendor_init tmpfs:chr_file { read open };
+allow vendor_init tmpfs:dir { create_dir_perms mounton };
+
+allow vendor_init op2_file:file create_file_perms;
+
+allow vendor_init proc_direct_swappiness:file w_file_perms;
+allow vendor_init proc_hung_task:file w_file_perms;
+allow vendor_init proc_swappiness:file w_file_perms;
+allow vendor_init proc_watermark_boost_factor:file rw_file_perms;
+
+get_prop(vendor_init, vendor_db_security_prop)
+set_prop(vendor_init, vendor_oem_bluetooth_prop)
+set_prop(vendor_init, vendor_oem_wifi_prop)
+set_prop(vendor_init, vendor_persist_camera_prop)

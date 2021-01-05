@@ -1,0 +1,11 @@
+type opf, domain;
+type opf_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(opf)
+
+type_transition opf device:file opf_file;
+
+allow opf device:dir create_dir_perms;
+allow opf device:file create_file_perms;
+
+allow opf opf_file:file create_file_perms;
