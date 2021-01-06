@@ -471,6 +471,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
     libstdc++.vendor
