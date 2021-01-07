@@ -42,6 +42,7 @@ on init
     write /dev/stune/system-background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
+    write /proc/restart_level_all 0
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
