@@ -273,3 +273,12 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
+
+on property:ro.boot.project_codename=instantnoodle
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.project_codename=instantnoodlep
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.project_codename=kebab
+    setprop persist.radio.multisim.config dsds
