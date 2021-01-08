@@ -774,6 +774,8 @@ vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Power-off alarm
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|b7912c844da3541d64f04ed287266a9695f87fc5
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
