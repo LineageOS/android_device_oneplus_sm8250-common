@@ -1202,7 +1202,6 @@ system_ext/etc/wfdconfigsink.xml
 system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
-system_ext/lib/libwfdaac.so
 system_ext/lib/libwfdavenhancements.so
 system_ext/lib/libwfdclient.so
 system_ext/lib/libwfdcommonutils.so
@@ -1254,7 +1253,6 @@ vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libwfdaac_vendor.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdconfigutils_proprietary.so
