@@ -692,6 +692,8 @@ vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # OMX
+vendor/lib/vndk/libstagefright_foundation.so
+vendor/lib/vndk/libstagefright_omx.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libdsd2pcm.so
