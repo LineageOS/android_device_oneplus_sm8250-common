@@ -15,6 +15,7 @@
 
 cc_binary {
     name: "vendor.lineage.touch@1.0-service.oneplus_kona",
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.oneplus_kona.xml"],
     init_rc: ["vendor.lineage.touch@1.0-service.oneplus_kona.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",

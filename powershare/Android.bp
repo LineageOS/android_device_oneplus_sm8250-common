@@ -18,6 +18,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "vendor.lineage.powershare@1.0-service.oneplus_kona",
     init_rc: ["vendor.lineage.powershare@1.0-service.oneplus_kona.rc"],
+    vintf_fragments: ["vendor.lineage.powershare@1.0-service.oneplus_kona.xml"],
     srcs: ["service.cpp", "PowerShare.cpp"],
     shared_libs: [
         "libbase",

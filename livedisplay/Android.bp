@@ -15,6 +15,7 @@
 
 cc_binary {
     name: "vendor.lineage.livedisplay@2.0-service.oneplus_kona",
+    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.oneplus_kona.xml"],
     init_rc: ["vendor.lineage.livedisplay@2.0-service.oneplus_kona.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
