@@ -18,6 +18,7 @@ oneplus_kona_fod_hal_binary {
     defaults: ["hidl_defaults"],
     name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona",
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.rc"],
+    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.xml"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     shared_libs: [
         "libbase",
