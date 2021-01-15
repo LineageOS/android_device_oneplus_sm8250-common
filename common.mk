@@ -243,6 +243,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
     libqdMetaData \
+    libqdMetaData.system \
     libtinyxml \
     libvulkan \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -250,7 +251,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     gralloc.kona \
-    libqdMetaData \
     libsdmcore \
     libsdmutils \
     memtrack.kona \
