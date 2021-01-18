@@ -117,6 +117,7 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller a600000.dwc3
+    write /sys/class/leds/vibrator/gain  ${persist.vendor.vib.gain:-0x55}
 #ifdef VENDOR_EDIT
     #Load WLAN driver
     #exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
