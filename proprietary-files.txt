@@ -50,9 +50,6 @@ system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio firmware
-vendor/firmware/tfa98xx.cnt
-
 # Audio libraries
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhaptic_effect.so
