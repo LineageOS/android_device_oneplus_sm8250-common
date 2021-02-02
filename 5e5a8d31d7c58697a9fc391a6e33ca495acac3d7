@@ -22,6 +22,30 @@
       "revId": "5e5a8d31d7c58697a9fc391a6e33ca495acac3d7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93f25ff5_b8f743c9",
+        "filename": "vendor.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-02-02T11:58:20Z",
+      "side": 1,
+      "message": "oops lol",
+      "parentUuid": "a68e8217_31f92951",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 173,
+        "endChar": 27
+      },
+      "revId": "5e5a8d31d7c58697a9fc391a6e33ca495acac3d7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
