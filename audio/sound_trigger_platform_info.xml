@@ -262,6 +262,7 @@
     <!-- Google Hotword -->
     <sound_model_config>
         <param vendor_uuid="7038ddc8-30f2-11e6-b0ac-40a8f03d3f15" />
+        <param get_module_version="true" />
         <param execution_type="ADSP" />
         <param max_ape_phrases="1" />
         <param max_ape_users="1" />
@@ -293,6 +294,7 @@
             <param unload_sound_model_ids="0x18000001, 0x0, 0x00012C15" />
             <param custom_config_ids="0x18000001, 0x0, 0x00012C20" />
             <param lab_dam_cfg_ids="0x00012C08, 0x0, 0x000102C4" />
+            <param version_ids="0x18000001, 0x0, 0x18000101" />
         </lsm_usecase>
         <lsm_usecase>
             <param capture_device="HANDSET" />
@@ -318,6 +320,7 @@
             <param unload_sound_model_ids="0x18000001, 0x0, 0x00012C15" />
             <param custom_config_ids="0x18000001, 0x0, 0x00012C20" />
             <param lab_dam_cfg_ids="0x00012C08, 0x0, 0x000102C4" />
+            <param version_ids="0x18000001, 0x0, 0x18000101" />
         </lsm_usecase>
         <lsm_usecase>
             <param capture_device="HEADSET" />
@@ -330,6 +333,7 @@
             <param unload_sound_model_ids="0x18000001, 0x0, 0x00012C15" />
             <param custom_config_ids="0x18000001, 0x0, 0x00012C20" />
             <param lab_dam_cfg_ids="0x00012C08, 0x0, 0x000102C4" />
+            <param version_ids="0x18000001, 0x0, 0x18000101" />
         </lsm_usecase>
 
         <!-- format: "ADPCM_packet" or "PCM_packet" !-->

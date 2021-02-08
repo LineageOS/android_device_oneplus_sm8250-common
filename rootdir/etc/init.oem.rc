@@ -106,9 +106,14 @@ on fs
 #add for tp firmware update
     write /sys/devices/platform/soc/a94000.i2c/i2c-4/4-004b/tp_fw_update 0
     write /sys/devices/platform/soc/a94000.i2c/i2c-4/4-0048/tp_fw_update 0
+    write /sys/devices/platform/soc/984000.i2c/i2c-4/4-005d/tp_fw_update 0
+    write /sys/devices/platform/soc/984000.i2c/i2c-4/4-0048/tp_fw_update 0
 
 #add for tp debug log
     chown system system /proc/touchpanel/tp_debug_log
+    chown system system /proc/touchpanel/gesture_enable
+    chown system system /proc/touchpanel/gesture_switch
+    chown system system /proc/touchpanel/tpedge_limit_enable
     chown system system /proc/touchpanel/tp_switch_dead_zone
     chown system system /proc/touchpanel/tp_switch_corner_dead_l_zone
     chown system system /proc/touchpanel/tp_switch_corner_dead_p_zone
@@ -419,17 +424,11 @@ service service_wifi_txEnable  /vendor/bin/sh /vendor/bin/wifi_txEnable
     oneshot
 
 on init
-    mount tmpfs none /sys/fs/cgroup mode=0750,uid=0,gid=1000
-    mkdir /sys/fs/cgroup/freezer 0750 root system
-    mount cgroup none /sys/fs/cgroup/freezer  freezer
-    chmod 777 /sys/fs/cgroup/freezer
-
-    mkdir /sys/fs/cgroup/net_cls
-    chmod 777 /sys/fs/cgroup/net_cls
-    mount cgroup  none /sys/fs/cgroup/net_cls net_cls
-    chmod 777 /sys/fs/cgroup/net_cls/tasks
-    mkdir /sys/fs/cgroup/net_cls/background 0777
-    chmod 777 /sys/fs/cgroup/net_cls/background/tasks
+    mkdir /dev/op_cgroup 0750 root system
+    mount tmpfs none /dev/op_cgroup mode=0750,uid=0,gid=1000
+    mkdir /dev/op_cgroup/freezer 0750 root system
+    mount cgroup none /dev/op_cgroup/freezer  freezer
+    chmod 777 /dev/op_cgroup/freezer
 #ifdef VENDOR_EDIT
     setprop persist.vendor.mdm_helper.fail_action cold_reset,s3_reset,panic
 #endif
@@ -684,6 +683,31 @@ service terminate_sniffer /vendor/bin/sh /vendor/bin/terminate_sniffer.sh
     group root
     disabled
     oneshot
+
+#v-krishna.rao@Connectivity, 2020/12/21 , servce to set iwpriv contention for btwifi coex debugging
+on property:persist.vendor.oem.btwificoex.debug=1
+    start startiwprivcontention
+
+on property:persist.vendor.oem.btwificoex.debug=0
+    start stopiwprivcontention
+
+on property:wlan.driver.status=ok && property:persist.vendor.oem.btwificoex.debug=1
+    start startiwprivcontention
+
+service startiwprivcontention /vendor/bin/sh /vendor/bin/startcontention.sh 1
+    class main
+    user root
+    group root
+    disabled
+    oneshot
+
+service stopiwprivcontention /vendor/bin/sh /vendor/bin/startcontention.sh 0
+    class main
+    user root
+    group root
+    disabled
+    oneshot
+
 #endif
 
 #ifdef VENDOR_EDIT
