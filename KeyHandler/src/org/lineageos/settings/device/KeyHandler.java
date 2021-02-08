@@ -49,6 +49,7 @@ public class KeyHandler implements DeviceKeyHandler {
         switch (scanCode) {
             case MODE_NORMAL:
                 mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                doHapticFeedback();
                 break;
             case MODE_VIBRATION:
                 mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
@@ -59,14 +60,13 @@ public class KeyHandler implements DeviceKeyHandler {
             default:
                 return event;
         }
-        doHapticFeedback();
 
         return null;
     }
 
     private void doHapticFeedback() {
         if (mVibrator != null && mVibrator.hasVibrator()) {
-            mVibrator.vibrate(VibrationEffect.createOneShot(50,
+            mVibrator.vibrate(VibrationEffect.createOneShot(150,
                     VibrationEffect.DEFAULT_AMPLITUDE));
         }
     }
