@@ -42,6 +42,7 @@ genfscon sysfs /devices/platform/soc/soc:oneplus_wlchg/power_supply/wireless    
 genfscon sysfs /module/memplus_core/parameters                                                                         u:object_r:sysfs_memplus:s0
 genfscon sysfs /module/qpnp_smb5/parameters/call_on                                                                    u:object_r:sysfs_dash_charger:s0
 genfscon sysfs /module/qpnp_smb5/parameters/video_call_on                                                              u:object_r:vendor_sysfs_video_call_on:s0
+genfscon sysfs /module/stmvl53l1                                                                                       u:object_r:sysfs_vl53l1:s0
 
 # sysfs (wakeup)
 genfscon sysfs /devices/0306_02.01.00/wakeup u:object_r:sysfs_wakeup:s0

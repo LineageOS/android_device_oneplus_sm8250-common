@@ -21,4 +21,5 @@ type sysfs_memplus, fs_type, sysfs_type;
 type sysfs_project_info, fs_type, sysfs_type;
 type sysfs_tpd, fs_type, sysfs_type;
 type sysfs_tri_state_key, sysfs_type, fs_type;
+type sysfs_vl53l1, fs_type, sysfs_type;
 type vendor_sysfs_video_call_on, fs_type, sysfs_type;

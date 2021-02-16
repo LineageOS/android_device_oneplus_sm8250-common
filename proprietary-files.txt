@@ -103,6 +103,7 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 # Camera
 vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
 vendor/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service
+vendor/bin/vl53l1_daemon_main
 vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service.rc
 vendor/lib/libcamxexternalformatutils.so
@@ -203,6 +204,7 @@ vendor/lib64/libVDBlurless.so
 vendor/lib64/libVDDualCameraBlurlessAPI.so
 vendor/lib64/libVDFusionBlurlessAPI_v2.so
 vendor/lib64/libVDSuperPhotoAPI.so
+vendor/lib64/libvl53l1_daemon.so
 vendor/lib64/sensors.hal.tof.so
 vendor/lib64/vendor.oneplus.hardware.camera@1.0.so
 vendor/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
