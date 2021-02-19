@@ -1,10 +1,4 @@
 hal_client_domain(hal_lineage_fod_default, hal_display)
 hal_client_domain(hal_lineage_fod_default, hal_fingerprint)
 
-#binder_call(hal_lineage_fod_default, hal_display_default)
-#binder_call(hal_lineage_fod_default, hal_fingerprint)
-
-#allow hal_lineage_fod_default hal_display_hwservice:hwservice_manager find;
-#allow hal_lineage_fod_default hal_fingerprint_hwservice:hwservice_manager find;
-
 allow hal_lineage_fod_default sysfs_fod:file rw_file_perms;
