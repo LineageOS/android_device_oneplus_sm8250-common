@@ -16,6 +16,24 @@
       "revId": "9cebfa5b9f028771f6f53d9130c20558c534eb3b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b7ffddd_7df19594",
+        "filename": "audio_amplifier/audio_amplifier.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-03-02T14:02:38Z",
+      "side": 1,
+      "message": "eh, maybe i could do that but i didn\u0027t want to diverge too much from original change.",
+      "parentUuid": "2ece9364_b6600ed2",
+      "revId": "9cebfa5b9f028771f6f53d9130c20558c534eb3b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
