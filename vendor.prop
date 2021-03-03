@@ -117,6 +117,10 @@ vendor.arcsoft.sn_isHardCopy=0
 vendor.camera.algo.jpeghwencode=1
 vendor.camera.aux.packagelist=com.oem.autotest,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8250
+
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
