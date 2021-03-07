@@ -156,7 +156,7 @@
         <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10"/>
         <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="10"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" acdb_id="8"/>
-        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="112"/>
+        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="43"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" acdb_id="7"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC_TMUS" acdb_id="41"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="41"/>
