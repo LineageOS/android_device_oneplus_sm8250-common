@@ -197,6 +197,10 @@
         <name>vendor.lineage.livedisplay</name>
         <version>2.1</version>
         <interface>
+            <name>IAntiFlicker</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
             <name>IDisplayModes</name>
             <instance>default</instance>
         </interface>
