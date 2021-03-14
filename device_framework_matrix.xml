@@ -173,6 +173,10 @@
         <name>vendor.dolby.hardware.dms</name>
         <version>2.0</version>
         <interface>
+            <name>IAntiFlicker</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
             <name>IDms</name>
             <instance>default</instance>
         </interface>
