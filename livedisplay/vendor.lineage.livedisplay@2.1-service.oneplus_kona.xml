@@ -6,5 +6,6 @@
         <fqname>@2.0::IDisplayModes/default</fqname>
         <fqname>@2.0::IPictureAdjustment/default</fqname>
         <fqname>@2.0::ISunlightEnhancement/default</fqname>
+        <fqname>@2.1::IAntiFlicker/default</fqname>
     </hal>
 </manifest>
