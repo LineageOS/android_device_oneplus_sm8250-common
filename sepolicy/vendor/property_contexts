@@ -30,6 +30,7 @@ ro.vendor.product.device.db               u:object_r:vendor_db_security_prop:s0
 ro.vendor.product.manufacturer.db         u:object_r:vendor_db_security_prop:s0
 vendor.calibration.fingerprint            u:object_r:vendor_fingerprint_prop:s0
 vendor.copy.opdiagnose.data               u:object_r:vendor_shell_prop:s0
+vendor.display.mode                       u:object_r:vendor_display_prop:s0
 vendor.nfc.                               u:object_r:vendor_nfc_prop:s0
 vendor.oem.rbr.log.clean                  u:object_r:vendor_default_prop:s0
 vendor.oem.wifi.socket.quit               u:object_r:vendor_set_wlan_prop:s0
