@@ -50,3 +50,4 @@ vendor.wlan.sniffer.output_dir            u:object_r:vendor_oem_wifi_prop:s0
 vendor.wlan.sniffer.status                u:object_r:vendor_oem_wifi_prop:s0
 vendor.wlan.sniffer.vendor_dir            u:object_r:vendor_oem_wifi_prop:s0
 vendor.wlan.write.con_mode                u:object_r:vendor_set_wlan_prop:s0
+vendor.display.mode                       u:object_r:vendor_display_prop:s0
