@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "beaf0427_e3f3408b",
+        "filename": "sepolicy/vendor/property_contexts",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-03-16T08:51:49Z",
+      "side": 1,
+      "message": "```\nqcom/sepolicy_vndr/generic/vendor/common/property_contexts\n71:vendor.display.               u:object_r:vendor_display_prop:s0\n72:ro.vendor.display.            u:object_r:vendor_display_prop:s0\n73:persist.vendor.display.       u:object_r:vendor_display_prop:s0\n127:vendor.display.qdcm_socket_service u:object_r:vendor_qdcmss_prop:s0\n\nqcom/sepolicy_vndr/legacy/vendor/common/property_contexts\n64:vendor.display.               u:object_r:vendor_display_prop:s0\n65:ro.vendor.display.            u:object_r:vendor_display_prop:s0\n66:persist.vendor.display.       u:object_r:vendor_display_prop:s0\n177:vendor.display.qdcm_socket_service u:object_r:vendor_qdcmss_prop:s0\n```",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 75
+      },
+      "revId": "404deb98388fb1fb6fc219b223e6f123be3d4aaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
