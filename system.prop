@@ -18,6 +18,9 @@ persist.vendor.color.matrix=2
 # CNE
 persist.vendor.cne.feature=1
 
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+
 # DPM
 persist.vendor.dpm.feature=9
 
