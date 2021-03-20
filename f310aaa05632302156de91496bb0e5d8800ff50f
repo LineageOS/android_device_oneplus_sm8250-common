@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e58a2e59_ee0428bf",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-03-20T20:24:53Z",
+      "side": 1,
+      "message": "randomly isn\u0027t a double click...",
+      "range": {
+        "startLine": 39,
+        "startChar": 48,
+        "endLine": 39,
+        "endChar": 67
+      },
+      "revId": "f310aaa05632302156de91496bb0e5d8800ff50f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
