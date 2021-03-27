@@ -16,3 +16,4 @@ r_dir_file(hal_param_default, sysfs_project_info)
 
 get_prop(hal_param_default, exported_default_prop)
 get_prop(hal_param_default, exported2_default_prop)
+set_prop(hal_param_default, vendor_param_boot_prop)

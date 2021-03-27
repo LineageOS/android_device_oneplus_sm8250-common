@@ -1,1 +1,3 @@
 allow domain opf_file:file r_file_perms;
+
+get_prop(domain, vendor_param_boot_prop)
