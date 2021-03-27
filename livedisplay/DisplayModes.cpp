@@ -23,10 +23,12 @@
 
 #include <fstream>
 
+using ::vendor::lineage::livedisplay::V2_0::DisplayMode;
+
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace implementation {
 
 static constexpr const char* kDisplayModeProp = "vendor.display.mode";
@@ -60,7 +62,7 @@ DisplayModes::DisplayModes() : mDefaultModeId(0) {
     }
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IDisplayModes follow.
 Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
     std::vector<DisplayMode> modes;
 
@@ -136,7 +138,7 @@ Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
 }
 
 }  // namespace implementation
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
