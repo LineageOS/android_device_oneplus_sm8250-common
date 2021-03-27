@@ -14,7 +14,7 @@ on init
     chmod 0666 /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
     chmod 0666 /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
 
-service vendor.livedisplay-hal-2-0 /vendor/bin/hw/vendor.lineage.livedisplay@2.0-service.oneplus_kona
+service vendor.livedisplay-hal-2-1 /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.oneplus_kona
     class hal
     user system
     group system
