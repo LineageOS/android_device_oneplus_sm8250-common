@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.livedisplay@2.0-service.oneplus_kona"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.oneplus_kona"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>

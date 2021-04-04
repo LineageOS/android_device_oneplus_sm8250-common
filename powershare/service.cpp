@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.powershare@1.0-service.oneplus_kona"
+#define LOG_TAG "vendor.lineage.powershare@1.0-service.oneplus_kona"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
