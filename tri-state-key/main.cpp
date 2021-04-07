@@ -90,8 +90,6 @@ int main() {
             return;
         }
 
-	LOG(INFO) << uevent.state;
-
         bool none = uevent.state.find("USB=0") != std::string::npos;
         bool vibration = uevent.state.find("USB-HOST=0") != std::string::npos;
         bool silent = uevent.state.find("null)=0") != std::string::npos;
