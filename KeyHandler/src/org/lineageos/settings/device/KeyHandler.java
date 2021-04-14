@@ -50,6 +50,10 @@ public class KeyHandler implements DeviceKeyHandler {
     }
 
     public KeyEvent handleKeyEvent(KeyEvent event) {
+        if (event.getAction() != KeyEvent.ACTION_DOWN) {
+            return event;
+        }
+
         int scanCode = event.getScanCode();
 
         switch (scanCode) {
