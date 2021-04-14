@@ -471,7 +471,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service.oneplus_kona
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
