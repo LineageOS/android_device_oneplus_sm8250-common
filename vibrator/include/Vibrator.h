@@ -60,7 +60,6 @@ public:
     int on(int32_t timeoutMs);
     int off();
     bool mDetected;
-private:
     int write_value(const char *file, const char *value);
 };
 
