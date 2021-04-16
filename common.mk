@@ -115,11 +115,11 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.bluetooth.audio@2.0-impl:32 \
+    android.hardware.soundtrigger@2.3-impl:32 \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.kona \
@@ -167,12 +167,12 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor:64 \
+    vendor.qti.hardware.btconfigstore@1.0.vendor:64
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti:64 \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service \
     bootctrl.kona \
@@ -183,10 +183,10 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
     Snap \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor:64
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -293,7 +293,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl:64 \
     android.hardware.health@2.1-service
 
 # HIDL
@@ -389,7 +389,7 @@ PRODUCT_BOOT_JARS += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
+    vendor.qti.hardware.perf@2.0.vendor:64
 
 # QMI
 PRODUCT_PACKAGES += \
