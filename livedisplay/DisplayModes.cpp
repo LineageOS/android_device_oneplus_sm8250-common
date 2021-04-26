@@ -29,35 +29,74 @@ namespace livedisplay {
 namespace V2_1 {
 namespace implementation {
 
-static constexpr const char* kDisplayModeProp = "vendor.display.mode";
 static const std::string kModeBasePath = "/sys/class/drm/card0-DSI-1/";
 static const std::string kDefaultPath = "/data/vendor/display/default_display_mode";
 
 const std::map<int32_t, DisplayModes::ModeInfo> DisplayModes::kModeMap = {
-    {0, {"Standard", "default"}},
-    {1, {"DCI P3", "native_display_p3_mode"}},
-    {2, {"Wide Color", "native_display_wide_color_mode"}},
-    {3, {"sRGB", "native_display_srgb_color_mode"}},
+    {0,
+     {"Standard",
+      {
+          {"native_display_p3_mode", "0"},
+          {"native_display_wide_color_mode", "0"},
+          {"native_display_srgb_color_mode", "0"},
+          {"native_display_customer_srgb_mode", "0"},
+          {"native_display_customer_p3_mode", "0"},
+          {"native_display_p3_mode", "1"},
+          {"native_display_loading_effect_mode", "1"},
+      }}},
+    {1,
+     {"Natural",
+      {
+          {"native_display_p3_mode", "0"},
+          {"native_display_wide_color_mode", "0"},
+          {"native_display_srgb_color_mode", "0"},
+          {"native_display_customer_srgb_mode", "0"},
+          {"native_display_customer_p3_mode", "0"},
+          {"native_display_srgb_color_mode", "1"},
+          {"native_display_loading_effect_mode", "0"},
+      }}},
+    {2,
+     {"AMOLED Wide Gamut",
+      {
+          {"native_display_p3_mode", "0"},
+          {"native_display_wide_color_mode", "0"},
+          {"native_display_srgb_color_mode", "0"},
+          {"native_display_customer_srgb_mode", "0"},
+          {"native_display_customer_p3_mode", "0"},
+          {"native_display_wide_color_mode", "1"},
+          {"native_display_loading_effect_mode", "1"},
+      }}},
+    {3,
+     {"sRGB",
+      {
+          {"native_display_p3_mode", "0"},
+          {"native_display_wide_color_mode", "0"},
+          {"native_display_srgb_color_mode", "0"},
+          {"native_display_customer_srgb_mode", "0"},
+          {"native_display_customer_p3_mode", "0"},
+          {"native_display_customer_srgb_mode", "1"},
+          {"native_display_loading_effect_mode", "0"},
+      }}},
+    {4,
+     {"DCI_P3",
+      {
+          {"native_display_p3_mode", "0"},
+          {"native_display_wide_color_mode", "0"},
+          {"native_display_srgb_color_mode", "0"},
+          {"native_display_customer_srgb_mode", "0"},
+          {"native_display_customer_p3_mode", "0"},
+          {"native_display_customer_p3_mode", "1"},
+          {"native_display_loading_effect_mode", "0"},
+      }}},
 };
 
 DisplayModes::DisplayModes() : mDefaultModeId(0) {
     std::ifstream defaultFile(kDefaultPath);
-    std::string value;
 
-    defaultFile >> value;
-    LOG(DEBUG) << "Default file read result " << value << " fail " << defaultFile.fail();
-    if (defaultFile.fail()) {
-        return;
-    }
+    defaultFile >> mDefaultModeId;
+    LOG(DEBUG) << "Default file read result " << mDefaultModeId << " fail " << defaultFile.fail();
 
-    for (const auto& entry : kModeMap) {
-        // Check if default mode is a valid mode
-        if (value == std::to_string(entry.first)) {
-            mDefaultModeId = entry.first;
-            android::base::SetProperty(kDisplayModeProp, entry.second.node);
-            break;
-        }
-    }
+    setDisplayMode(mDefaultModeId, false);
 }
 
 // Methods from ::vendor::lineage::livedisplay::V2_1::IDisplayModes follow.
@@ -72,23 +111,11 @@ Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
 }
 
 Return<void> DisplayModes::getCurrentDisplayMode(getCurrentDisplayMode_cb resultCb) {
+    std::ifstream defaultFile(kDefaultPath);
+
     int32_t currentModeId = mDefaultModeId;
-    std::string value;
+    defaultFile >> currentModeId;
 
-    for (const auto& entry : kModeMap) {
-        if (entry.first == 0) {
-            continue;
-        }
-
-        std::ifstream modeFile(kModeBasePath + entry.second.node);
-        if (!modeFile.fail()) {
-            modeFile >> value;
-            if (value == "1") {
-                currentModeId = entry.first;
-                break;
-            }
-        }
-    }
     resultCb({currentModeId, kModeMap.at(currentModeId).name});
     return Void();
 }
@@ -99,32 +126,17 @@ Return<void> DisplayModes::getDefaultDisplayMode(getDefaultDisplayMode_cb result
 }
 
 Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
-    // Disable all modes
-    for (const auto& entry : kModeMap) {
-        if (entry.first == 0) {
-            continue;
-        }
-
-        std::ofstream modeFile(kModeBasePath + entry.second.node);
-        if (!modeFile.fail()) {
-            modeFile << 0;
-        }
-    }
     const auto iter = kModeMap.find(modeID);
     if (iter == kModeMap.end()) {
         return false;
     }
-    if (modeID != 0) {
-        std::ofstream modeFile(kModeBasePath + iter->second.node);
-        modeFile << 1;
-        if (modeFile.fail()) {
-            return false;
+    for (const auto& [name, value] : iter->second.commands) {
+        std::ofstream file(kModeBasePath + name);
+        file << value;
+        if (file.fail()) {
+            LOG(ERROR) << "Failed to write to " << (kModeBasePath + name);
         }
-        android::base::SetProperty(kDisplayModeProp, iter->second.node);
-    } else {
-        android::base::SetProperty(kDisplayModeProp, "");
     }
-
     if (makeDefault) {
         std::ofstream defaultFile(kDefaultPath);
         defaultFile << iter->first;
