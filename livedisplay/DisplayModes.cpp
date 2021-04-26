@@ -121,6 +121,8 @@ Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
             return false;
         }
         android::base::SetProperty(kDisplayModeProp, iter->second.node);
+    } else {
+        android::base::SetProperty(kDisplayModeProp, "");
     }
 
     if (makeDefault) {
