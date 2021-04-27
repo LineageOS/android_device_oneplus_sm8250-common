@@ -290,4 +290,13 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>256</item>
+        <item>257</item>
+        <item>258</item>
+        <item>259</item>
+    </integer-array>
 </resources>
