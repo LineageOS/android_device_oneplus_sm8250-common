@@ -23,7 +23,6 @@ cc_binary {
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
         "AntiFlicker.cpp",
-        "DisplayModes.cpp",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],
