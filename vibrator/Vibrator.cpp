@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -54,6 +54,13 @@ namespace vibrator {
 #define LIGHT_MAGNITUDE         0x3fff
 #define INVALID_VALUE           -1
 #define CUSTOM_DATA_LEN    3
+
+#define MSM_CPU_LAHAINA         415
+#define APQ_CPU_LAHAINA         439
+#define MSM_CPU_SHIMA           450
+#define MSM_CPU_SM8325          501
+#define APQ_CPU_SM8325P         502
+#define MSM_CPU_YUPIK           475
 
 #define test_bit(bit, array)    ((array)[(bit)/8] & (1<<((bit)%8)))
 
@@ -164,10 +171,18 @@ InputFFDevice::InputFFDevice()
                 fscanf(fp, "%u", &soc);
                 fclose(fp);
             }
-            if (soc == 400 || soc == 415) {
+            switch (soc) {
+            case MSM_CPU_LAHAINA:
+            case APQ_CPU_LAHAINA:
+            case MSM_CPU_SHIMA:
+            case MSM_CPU_SM8325:
+            case APQ_CPU_SM8325P:
+            case MSM_CPU_YUPIK:
                 mSupportExternalControl = true;
-            } else {
+                break;
+            default:
                 mSupportExternalControl = false;
+                break;
             }
             break;
         }
