@@ -26,6 +26,7 @@ genfscon proc /wireless/quiet_mode                  u:object_r:procfs_oem_wirele
 genfscon proc /wireless/rx_voltage                  u:object_r:procfs_oem_wireless:s0
 
 # sysfs
+genfscon sysfs /devices/platform/soc/994000.i2c/i2c-7/7-005c/power_supply/op_charger                                   u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator                                             u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dim_alpha                             u:object_r:sysfs_fod:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en                        u:object_r:sysfs_livedisplay_tuneable:s0
