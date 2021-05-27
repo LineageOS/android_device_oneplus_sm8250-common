@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus8ProOxygen_15.E.35_OTA_0350_all_2103221817_e79fa5
+# All unpinned blobs below are extracted from OnePlus8ProOxygen_15.E.36_OTA_0360_all_2105181828_5d18f419b
 
 # ADSP
 vendor/bin/adsprpcd
