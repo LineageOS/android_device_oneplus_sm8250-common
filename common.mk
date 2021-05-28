@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     ftm_power_config.sh \
     init.class_main.sh \
     init.crda.sh \
-    init.cust.rc \
     init.mdm.sh \
     init.oem.debug.rc \
     init.oem.minidump.sdx55m.rc \
