@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24c868af_cf020f56",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-06-01T09:01:49Z",
+      "side": 1,
+      "message": "Is this used at all without media.c2 hal?",
+      "range": {
+        "startLine": 648,
+        "startChar": 0,
+        "endLine": 648,
+        "endChar": 51
+      },
+      "revId": "2bee5a8ca6187d89c45fd14d36adf676e4a94f84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
