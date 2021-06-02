@@ -306,6 +306,11 @@ on post-fs
     chmod 660 /sys/class/power_supply/battery/op_disable_charge
     chown system system /sys/class/power_supply/bms/battery_h
     chmod 660 /sys/class/power_supply/bms/battery_h
+#brian@BSP, 2021/3/4, add for [IKR-43692] charging optimizated
+    chown system system /sys/class/power_supply/bms/full_available_capacity
+    chmod 660 /sys/class/power_supply/bms/full_available_capacity
+    chown system system /sys/class/power_supply/bms/full_charge_capacity_filtered
+    chmod 660 /sys/class/power_supply/bms/full_charge_capacity_filtered
 #endif
 #ifdef VENDOR_EDIT
 #randle.liu@optimization, 2020/04/24, [OSP-6116] avoid waking up when wireless charging disconnects
