@@ -106,14 +106,9 @@ on fs
 #add for tp firmware update
     write /sys/devices/platform/soc/a94000.i2c/i2c-4/4-004b/tp_fw_update 0
     write /sys/devices/platform/soc/a94000.i2c/i2c-4/4-0048/tp_fw_update 0
-    write /sys/devices/platform/soc/984000.i2c/i2c-4/4-005d/tp_fw_update 0
-    write /sys/devices/platform/soc/984000.i2c/i2c-4/4-0048/tp_fw_update 0
 
 #add for tp debug log
     chown system system /proc/touchpanel/tp_debug_log
-    chown system system /proc/touchpanel/gesture_enable
-    chown system system /proc/touchpanel/gesture_switch
-    chown system system /proc/touchpanel/tpedge_limit_enable
     chown system system /proc/touchpanel/tp_switch_dead_zone
     chown system system /proc/touchpanel/tp_switch_corner_dead_l_zone
     chown system system /proc/touchpanel/tp_switch_corner_dead_p_zone
@@ -306,6 +301,11 @@ on post-fs
     chmod 660 /sys/class/power_supply/battery/op_disable_charge
     chown system system /sys/class/power_supply/bms/battery_h
     chmod 660 /sys/class/power_supply/bms/battery_h
+#brian@BSP, 2021/3/4, add for [IKR-43692] charging optimizated
+    chown system system /sys/class/power_supply/bms/full_available_capacity
+    chmod 660 /sys/class/power_supply/bms/full_available_capacity
+    chown system system /sys/class/power_supply/bms/full_charge_capacity_filtered
+    chmod 660 /sys/class/power_supply/bms/full_charge_capacity_filtered
 #endif
 #ifdef VENDOR_EDIT
 #randle.liu@optimization, 2020/04/24, [OSP-6116] avoid waking up when wireless charging disconnects
@@ -352,11 +352,16 @@ on post-fs-data
     chown system system /sys/module/tpd/parameters/tpd_dynamic
     chown system system /sys/module/fuse/parameters/shortcircuit
     chown system system /sys/module/fuse/parameters/sct_mode
+    chown system system /sys/module/houston/parameters/game_fps_pid
+    chown system system /sys/module/houston/parameters/game_info
     # fps stabilizer
     chown system system /sys/module/houston/parameters/efps_max
     chown system system /sys/module/houston/parameters/fps_boost_strategy
     chown system system /sys/module/houston/parameters/egl_buf
     chown system system /sys/module/houston/parameters/ht_online_config_update
+    # Jacky.Ho@OPTI 2020/09/30 add for [OPTI-85]
+    chown system system /sys/module/tpp/parameters/tpp_on
+    chown system system /sys/module/tpp/parameters/strategy
 
 # Ted.Lin@ASTI 2019/06/12 add for CONFIG_CONTROL_CENTER
     chown system system /dev/cc_ctl
@@ -683,31 +688,6 @@ service terminate_sniffer /vendor/bin/sh /vendor/bin/terminate_sniffer.sh
     group root
     disabled
     oneshot
-
-#v-krishna.rao@Connectivity, 2020/12/21 , servce to set iwpriv contention for btwifi coex debugging
-on property:persist.vendor.oem.btwificoex.debug=1
-    start startiwprivcontention
-
-on property:persist.vendor.oem.btwificoex.debug=0
-    start stopiwprivcontention
-
-on property:wlan.driver.status=ok && property:persist.vendor.oem.btwificoex.debug=1
-    start startiwprivcontention
-
-service startiwprivcontention /vendor/bin/sh /vendor/bin/startcontention.sh 1
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
-service stopiwprivcontention /vendor/bin/sh /vendor/bin/startcontention.sh 0
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
 #endif
 
 #ifdef VENDOR_EDIT
@@ -861,3 +841,10 @@ on property:persist.sys.iolimiter.enable=true
 	chown system system /sys/module/oneplus_healthinfo/parameters/ohm_sample_time
 	chown system system /sys/module/oneplus_healthinfo/parameters/ohm_action_ctrl
 	chown system system /proc/iolimit_enable
+
+#huangwen.chen#OPTI, 2020/9/16, [OPTI-43], add for zram writeback
+on property:persist.vendor.oem.dump=0
+    setprop persist.vendor.zwriteback.backup 0
+
+on property:persist.vendor.oem.dump=1
+    setprop persist.vendor.zwriteback.backup 1
