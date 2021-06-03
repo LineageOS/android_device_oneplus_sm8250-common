@@ -205,7 +205,7 @@ persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
-ro.telephony.default_network=33,22
+ro.telephony.default_network=33,33
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
