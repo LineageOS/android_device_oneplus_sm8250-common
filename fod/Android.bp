@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2019 The LineageOS Project
+// Copyright (C) 2019-2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,10 +13,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oneplus_kona_fod_hal_binary {
-    relative_install_path: "hw",
-    defaults: ["hidl_defaults"],
+soong_config_module_type {
+    name: "oneplus_kona_fod_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "ONEPLUS_KONA_FOD",
+    value_variables: ["POS_X", "POS_Y", "SIZE"],
+    properties: ["cppflags"],
+}
+
+oneplus_kona_fod_hal_cc_defaults {
+    name: "oneplus_kona_fod_hal_defaults",
+    soong_config_variables: {
+        POS_X: {
+            cppflags: ["-DFOD_POS_X=%s"],
+        },
+        POS_Y: {
+            cppflags: ["-DFOD_POS_Y=%s"],
+        },
+        SIZE: {
+            cppflags: ["-DFOD_SIZE=%s"],
+        },
+    },
+}
+
+cc_binary {
     name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona",
+    defaults: [
+        "hidl_defaults",
+        "oneplus_kona_fod_hal_defaults",
+    ],
+    relative_install_path: "hw",
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.rc"],
     vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.xml"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
