@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ca806d89_7d16bffc",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 943,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2021-06-07T16:30:25Z",
+      "side": 1,
+      "message": "libOmxVenc needs it to build, it should be kept as a module (both arch)",
+      "range": {
+        "startLine": 943,
+        "startChar": 0,
+        "endLine": 943,
+        "endChar": 28
+      },
+      "revId": "405ddeeb3e63d2ee70c748e923f6959d9baa4901",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
