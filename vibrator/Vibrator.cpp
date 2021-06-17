@@ -53,7 +53,8 @@ namespace vibrator {
 #define MEDIUM_MAGNITUDE        0x5fff
 #define LIGHT_MAGNITUDE         0x3fff
 #define INVALID_VALUE           -1
-#define CUSTOM_DATA_LEN    3
+#define CUSTOM_DATA_LEN         3
+#define NAME_BUF_SIZE           32
 
 #define MSM_CPU_LAHAINA         415
 #define APQ_CPU_LAHAINA         439
@@ -121,6 +122,7 @@ InputFFDevice::InputFFDevice()
     uint8_t ffBitmask[FF_CNT / 8];
     char devicename[PATH_MAX];
     const char *INPUT_DIR = "/dev/input/";
+    char name[NAME_BUF_SIZE];
     int fd, ret;
     int soc = property_get_int32("ro.vendor.qti.soc_id", -1);
 
@@ -152,6 +154,20 @@ InputFFDevice::InputFFDevice()
             continue;
         }
 
+        ret = TEMP_FAILURE_RETRY(ioctl(fd, EVIOCGNAME(sizeof(name)), name));
+        if (ret == -1) {
+            ALOGE("get input device name %s failed, errno = %d\n", devicename, errno);
+            close(fd);
+            continue;
+        }
+
+        if (strcmp(name, "qcom-hv-haptics") && strcmp(name, "qti-haptics")) {
+            ALOGD("not a qcom/qti haptics device\n");
+            close(fd);
+            continue;
+        }
+
+        ALOGI("%s is detected at %s\n", name, devicename);
         ret = TEMP_FAILURE_RETRY(ioctl(fd, EVIOCGBIT(EV_FF, sizeof(ffBitmask)), ffBitmask));
         if (ret == -1) {
             ALOGE("ioctl failed, errno = %d", errno);
