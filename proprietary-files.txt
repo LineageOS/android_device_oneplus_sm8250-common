@@ -310,6 +310,7 @@ vendor/lib64/libhdr_tm.so
 
 # Display (HWC)
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
 
