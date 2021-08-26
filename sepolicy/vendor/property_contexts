@@ -23,7 +23,6 @@ persist.vendor.tcpdump.copy               u:object_r:vendor_oem_wifi_prop:s0
 persist.vendor.tcpdump.dir                u:object_r:vendor_oem_wifi_prop:s0
 persist.vendor.tcpdump.location           u:object_r:vendor_oem_wifi_prop:s0
 persist.vendor.tcpdump.mdpermission       u:object_r:vendor_oem_wifi_prop:s0
-ro.gfx.driver.1                           u:object_r:exported3_default_prop:s0
 ro.vendor.build.display.full_id           u:object_r:vendor_rild_prop:s0
 ro.vendor.product.device.db               u:object_r:vendor_db_security_prop:s0
 ro.vendor.product.manufacturer.db         u:object_r:vendor_db_security_prop:s0
