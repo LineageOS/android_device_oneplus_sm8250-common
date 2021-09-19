@@ -48,18 +48,19 @@
 /dev/wlchg                u:object_r:wlchg_device:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.oneplus_kona            u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.oneplus_kona    u:object_r:hal_lineage_fod_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus_kona                          u:object_r:hal_lineage_livedisplay_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.oneplus_kona                           u:object_r:hal_lineage_powershare_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus_kona                                u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                                   u:object_r:hal_cameraHIDL_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                            u:object_r:hal_cameraHIDL_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service                                  u:object_r:hal_display_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service                                  u:object_r:hal_hdcpkey_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                                    u:object_r:hal_param_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service                              u:object_r:hal_graphics_composer_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service                       u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.oneplus            u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.oneplus    u:object_r:hal_lineage_fod_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus                          u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.oneplus                           u:object_r:hal_lineage_powershare_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus                                u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                              u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                       u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service                             u:object_r:hal_display_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service                             u:object_r:hal_hdcpkey_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                               u:object_r:hal_param_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service                         u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service                  u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oneplus                           u:object_r:hal_vibrator_default_exec:s0
 
 # OP1, OP2 files
 /mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
