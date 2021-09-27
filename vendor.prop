@@ -183,6 +183,7 @@ persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true
 
 # USB
+sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 
