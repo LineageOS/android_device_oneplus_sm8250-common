@@ -1,4 +1,3 @@
-persist.vendor.bluetooth.a2dp.            u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bluetooth.bt.uart.log      u:object_r:vendor_oem_bluetooth_prop:s0
 persist.vendor.cwb.debug                  u:object_r:vendor_cwb_prop:s0
 persist.vendor.cwb.dump                   u:object_r:vendor_cwb_prop:s0
