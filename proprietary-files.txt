@@ -663,12 +663,6 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-system/etc/nfcee_access.xml
--system_ext/app/NQNfcNci/NQNfcNci.apk;OVERRIDES=NfcNci
-system_ext/etc/permissions/com.nxp.nfc.nq.xml
-system_ext/framework/com.nxp.nfc.nq.jar
-system_ext/lib64/libnqnfc-nci.so
-system_ext/lib64/libnqnfc_nci_jni.so
 vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/permissions/com.nxp.mifare.xml
