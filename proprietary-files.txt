@@ -307,23 +307,16 @@ vendor/etc/init/vendor.oneplus.hardware.display@1.0-service.rc
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
 
-# Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
-
-# Display (SDM)
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Display (SDM) - from alioth - RKQ1.200826.002
+vendor/lib64/libdisplayqos.so|5a4431998d0d25af797f3704740f163afad905ca
+vendor/lib64/libdisplayskuutils.so|a3ecb8cd3d6c00652491e22a7b807d3e89c2dd20
+vendor/lib64/libqseed3.so|a395e87508d708583e8c6f07a6c66c88677cc62b
+vendor/lib64/libsdm-color.so|014c7e37b5d3434c551d1ddf9362b72ab8f9a43d
+vendor/lib64/libsdm-colormgr-algo.so|05267159d9c05bca2436bf6aeb36b4fe2e46aa5d
+vendor/lib64/libsdm-diag.so|38ad3f8c4fa3556d14ba342df9bf6385676c5dd7
+vendor/lib64/libsdm-disp-vndapis.so|6b50dc1569393405255cceb61fd69116b0682f10
+vendor/lib64/libsdmextension.so|e4c9146248cd497620a3c87ca7faf017e7cf0731
+vendor/lib64/libtinyxml2_1.so|5608839c9164920da5d4f9cb37729b9ee8e1e241
 
 # Display calibration data
 vendor/etc/ltm_config_samsung_amb655x_fhd_cmd_mode_dsc_dsi_panel.xml
