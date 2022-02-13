@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef948aba_033e1545",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-02-13T23:14:45Z",
+      "side": 1,
+      "message": "Display dies halfway through boot, but it recovers like 2 minutes later (?)",
+      "revId": "6a7bdb46bf443e9d8af41837e5147a16a23c1afd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
