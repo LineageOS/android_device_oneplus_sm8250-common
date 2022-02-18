@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5098ba93_7286826a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-02-18T08:43:12Z",
+      "side": 1,
+      "message": "Have you checked stock? mine has 2021-03-01 for opengles but 2020-03-01 for vulkan",
+      "revId": "58385e3fe3ed42574fcadc5e009e0d6dfc37b6c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
