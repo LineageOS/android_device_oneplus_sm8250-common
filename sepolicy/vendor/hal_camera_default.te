@@ -12,6 +12,8 @@ allow hal_camera_default vendor_persist_file:file create_file_perms;
 allow hal_camera_default input_device:dir r_dir_perms;
 allow hal_camera_default input_device:chr_file r_file_perms;
 
+allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
+
 allow hal_camera_default vl53l1_device:chr_file rw_file_perms;
 
 allow hal_camera_default proc_meminfo:file r_file_perms;
