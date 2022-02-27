@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "989d097f_6696a88d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16908
+      },
+      "writtenOn": "2022-02-27T18:14:53Z",
+      "side": 1,
+      "message": "Are these props needed?\nro.surface_flinger.refresh_rate_switching\u003dtrue\nro.surface_flinger.use_content_detection_for_refresh_rate\u003dtrue",
+      "revId": "9530fdf1c5d3df43790fa78d76c397c2d3810977",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
