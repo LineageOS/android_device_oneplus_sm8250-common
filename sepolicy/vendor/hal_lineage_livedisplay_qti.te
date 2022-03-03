@@ -1,5 +1,5 @@
 allow hal_lineage_livedisplay_qti vendor_display_vendor_data_file:dir rw_dir_perms;
 allow hal_lineage_livedisplay_qti vendor_display_vendor_data_file:file create_file_perms;
 
-allow hal_lineage_livedisplay_qti sysfs_graphics:dir r_dir_perms;
+allow hal_lineage_livedisplay_qti vendor_sysfs_graphics:dir r_dir_perms;
 allow hal_lineage_livedisplay_qti sysfs_livedisplay_tuneable:file rw_file_perms;
