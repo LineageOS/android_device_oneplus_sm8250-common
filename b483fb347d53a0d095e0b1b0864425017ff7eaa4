@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e247c9c_a8dea941",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-03-31T10:57:36Z",
+      "side": 1,
+      "message": "Let\u0027s wait for that vendor/lineage change to go through ^^",
+      "revId": "b483fb347d53a0d095e0b1b0864425017ff7eaa4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
