@@ -340,7 +340,7 @@ odm/firmware/fastchg/2169A/oplus_vooc_fw_rk826.bin
 odm/firmware/fastchg/2169B/oplus_vooc_fw_rk826.bin
 
 # CNE
--vendor/app/CneApp/CneApp.apk
+vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
 vendor/bin/mutualex
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -516,7 +516,7 @@ system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -560,7 +560,7 @@ vendor/etc/init/feature_enabler_client.rc
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/bin/init.oplus.fingerprints.sh
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
--odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
+odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/lib64/hw/fingerprint.18821_goodix9508_G2_4.default.so
 odm/lib64/hw/fingerprint.18857_goodix9508_G2_4.default.so
 odm/lib64/hw/fingerprint.18865_goodix9558_G3.default.so
@@ -638,7 +638,7 @@ vendor/lib64/hw/vulkan.adreno.so
 # GNSS
 odm/etc/izat.conf
 odm/etc/sap.conf
--vendor/app/CACertService/CACertService.apk
+vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -648,8 +648,8 @@ vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/etc/apdr.conf
 vendor/etc/cacert_location.pem
 vendor/etc/flp.conf
@@ -703,17 +703,17 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
--my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
 # IMS - from renoir - 22.5.11
--system_ext/app/ImsRcsService/ImsRcsService.apk|d03d3142f3518e755d02ace26b17170218ed8b4b
--system_ext/app/QtiTelephony/QtiTelephony.apk|f2ea59dfc69126c83905979e2d55d7c5f02e15e1
+system_ext/app/ImsRcsService/ImsRcsService.apk|d03d3142f3518e755d02ace26b17170218ed8b4b
+system_ext/app/QtiTelephony/QtiTelephony.apk|f2ea59dfc69126c83905979e2d55d7c5f02e15e1
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|54487895eb4c26e6ec642538dba910de9b092c81
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml|83fb6029772c3a425dbd5cd45a61ca9d427e7604
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml|e34b3affaef4e4ee135cbeec8d7c3e8c6cfd65ce
--system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|a5791aa90552999909e52648d576055a8c533397
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|a5791aa90552999909e52648d576055a8c533397
 system_ext/lib64/lib-imsvideocodec.so|e1e994cb122ad48b77ae10295a29bcfbe84e4d22
 system_ext/lib64/lib-imsvt.so|38b39cafe351be5abc7b6ae5055ea1f390032502
 system_ext/lib64/lib-imsvtextutils.so|16bed08e80919635fcb7ace934bd5f16f059c182
@@ -722,7 +722,7 @@ system_ext/lib64/libdiag_system.so|35bace09ba74af348b9530fb02cf7088c90a44fd
 system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
 system_ext/lib64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
--system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
+system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
 
 # IMS
 vendor/bin/ims_rtp_daemon
@@ -793,8 +793,8 @@ vendor/firmware/ipa_uc.mdt
 # Iris
 odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
 odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
--odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
--odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
 odm/lib64/libpwirisIoctlWrapper.so
 odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
@@ -850,8 +850,8 @@ vendor/etc/public.libraries.txt
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/libhta.so
 vendor/lib64/libhta_hexagon_runtime.so
@@ -864,7 +864,7 @@ vendor/lib64/unnhal-acc-hvx.so
 odm/bin/hw/vendor.nxp.hardware.nfc@1.2-service
 odm/etc/init/init.SN100x.nfc.rc
 odm/etc/init/vendor.nxp.hardware.nfc@1.2-service.rc
--odm/etc/vintf/manifest/manifest_nfc_sn100t.xml
+odm/etc/vintf/manifest/manifest_nfc_sn100t.xml
 odm/etc/libnfc-nci.conf
 odm/lib64/nfc_nci.nqx.default.hw.so
 odm/lib64/vendor.nxp.hardware.nfc@1.0.so
@@ -1020,7 +1020,7 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
 # Power-off alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk|d6d473476375d9bee5f082e62b5244d016909efa
+product/app/PowerOffAlarm/PowerOffAlarm.apk|d6d473476375d9bee5f082e62b5244d016909efa
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
@@ -1076,13 +1076,13 @@ vendor/lib64/libqmiservices.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.ims@1.0.so
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--vendor/app/IWlanService/IWlanService.apk
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
@@ -1182,7 +1182,7 @@ odm/lib64/android.hardware.secure_element@1.0-impl.so
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
 odm/bin/oplus_sensor_fb
 odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
--odm/etc/vintf/manifest/manifest_oplusSensor.xml
+odm/etc/vintf/manifest/manifest_oplusSensor.xml
 odm/lib64/liboplus_service.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -1300,7 +1300,7 @@ vendor/etc/thermal-engine.conf
 -vendor/lib64/libthermalclient.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
@@ -2335,7 +2335,7 @@ odm/lib64/vendor.oplus.hardware.orms@1.0.so
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice_osie_sr.rc
--vendor/etc/vintf/manifest/manifest_oplus_osiesr.xml
+vendor/etc/vintf/manifest/manifest_oplus_osiesr.xml
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
@@ -2355,7 +2355,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.4.so
 # Widevine DRM
 odm/bin/hw/android.hardware.drm@1.3-service.widevine
 odm/etc/init/android.hardware.drm@1.3-service.widevine.rc
--odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 odm/lib64/mediadrm/libwvdrmengine.so
 odm/lib64/liboemcrypto.so
 odm/lib64/libwvhidl.so
@@ -2368,7 +2368,7 @@ vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # WiFi Display (system)
--system/framework/WfdCommon.jar
+system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/seccomp_policy/wfdservice.policy
@@ -2410,7 +2410,7 @@ system_ext/lib64/libwfduibcsink.so
 system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
--system_ext/priv-app/WfdService/WfdService.apk
+system_ext/priv-app/WfdService/WfdService.apk
 
 # WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice
