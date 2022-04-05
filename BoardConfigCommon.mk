@@ -62,7 +62,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
-    OEM_TARGET_PRODUCT=$(PRODUCT_DEVICE)
+    BRAND_SHOW_FLAG=oneplus
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
 
@@ -184,7 +184,7 @@ CUSTOM_APNS_FILE := $(COMMON_PATH)/configs/apns-conf.xml
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2022-02-01
+VENDOR_SECURITY_PATCH := 2022-05-05
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
