@@ -22,9 +22,8 @@
     <string-array name="config_color_mode_options_strings" translatable="false">
         <item>Vivid</item>
         <item>Natural</item>
-        <item>AMOLED Wide Gamut</item>
-        <item>sRGB</item>
-        <item>Display P3</item>
+        <item>Cinematic</item>
+        <item>Brilliant</item>
     </string-array>
 
     <!-- Display settings screen, Color mode options. Must be the same length and order as
@@ -33,7 +32,6 @@
     <integer-array name="config_color_mode_options_values" translatable="false">
         <item>0</item>
         <item>256</item>
-        <item>257</item>
         <item>258</item>
         <item>259</item>
     </integer-array>
