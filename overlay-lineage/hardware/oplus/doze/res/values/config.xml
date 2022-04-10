@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2021 The LineageOS Project
+     Copyright (C) 2021-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -16,5 +16,8 @@
 -->
 <resources>
     <!-- Sensor types -->
-    <string name="pickup_sensor_type">oneplus.sensor.op_motion_detect</string>
+    <string name="pickup_sensor_type">android.sensor.tilt_detector</string>
+
+    <!-- Sensor trigger values -->
+    <item name="pickup_sensor_value" format="float" type="dimen">0.0</item>
 </resources>
