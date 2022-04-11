@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--- Copyright (c) 2013-2019, The Linux Foundation. All rights reserved.       -->
+<!--- Copyright (c) 2013-2020, The Linux Foundation. All rights reserved.       -->
 <!---                                                                           -->
 <!--- Redistribution and use in source and binary forms, with or without        -->
 <!--- modification, are permitted provided that the following conditions are    -->
@@ -37,10 +37,11 @@
 <!--- 0x0105: Select <lsm_usecase> based on capture device                      -->
 
     <common_config>
+        <param implementer_version="0x0101" />
         <param max_ape_sessions="8" />
         <param enable_failure_detection="false" />
         <param support_device_switch="false" />
-        <param transit_to_non_lpi_on_battery_charging="false" />
+        <param transit_to_non_lpi_on_battery_charging="true" />
         <!-- Below backend params must match with port used in mixer path file -->
         <!-- param used to configure backend sample rate, format and channels -->
         <param backend_port_name="VA_CDC_DMA_TX_0" />
@@ -49,12 +50,22 @@
         <!-- Param used to indicate if SVA has dedicated SLIM ports -->
         <param dedicated_sva_path="false" />
         <param dedicated_headset_path="false" />
-        <!-- QC Sabrina Wong change to false  -->
-        <param concurrent_capture="false" />
+        <!-- Run.Zhang@MULTIMEDIA.AudioDriver.ST_HAL, 2021/11/08, OPLUS_ARCH_EXTENDS Modify for fixing wakeup during recording -->
+        <param concurrent_capture="true" />
+        <!-- Run.Zhang@MULTIMEDIA.AudioDriver.ST_HAL, 2021/11/08, OPLUS_ARCH_EXTENDS Modify for fixing wakeup during recording end -->
         <param platform_lpi_enable="true" />
         <!-- Need to be changed to false after testing -->
         <param enable_debug_dumps="false" />
         <param support_non_lpi_without_ec="false" />
+        <!-- Kaijia.Lin@MULTIMEDIA.AudioDriver.ST_HAL.2672650, 2019/12/13, OPLUS_BUG_STABILITY Modify for CR#2585011 fixing incall wakeup -->
+        <param concurrent_voice_call="false" />
+        <param concurrent_voip_call="false" />
+        <!--#alvin.zhang@MULTIMEDIA.AUDIODRIVER.FEATURE, 2020/12/16, Add for OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH-->
+        <param va_mic_clk_switch="true"/>
+        <!--#alvin.zhang@MULTIMEDIA.AUDIODRIVER.FEATURE, 2020/12/16, Add for OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH end-->
+        <!--#Run.zhang@MULTIMEDIA.AUDIODRIVER.FEATURE, 2021/8/16, Add for sva_transparent_disabled-->
+        <param sva_transparent_disabled="true"/>
+        <!--#Run.zhang@MULTIMEDIA.AUDIODRIVER.FEATURE, 2021/8/16, Add for sva_transparent_disabled end-->
     </common_config>
     <acdb_ids>
         <param DEVICE_HANDSET_MIC_APE="100" />
@@ -128,7 +139,6 @@
             <!-- fluence_type: "FLUENCE_MIC", "FLUENCE_DMIC", "FLUENCE_TMIC"   -->
             <!-- "FLUENCE_QMIC". Param value is valid when adm_cfg_profile -->
             <!-- is FFECNS -->
-            <!-- liuhaituo@MM.Audio, 2019/10/18, Modify mic config -->
             <param fluence_type="FLUENCE_DMIC" />
             <param execution_mode="ADSP" />
             <!-- lpi_mode: "NON_LPI_BARGE_IN", "NON_LPI", "LPI" -->
@@ -140,7 +150,7 @@
             <!-- LPI: This mode type will be used for LPI usecases. -->
             <param lpi_mode="NON_LPI_BARGE_IN" />
             <param app_type="2" /> <!-- app type used in ACDB -->
-            <param in_channels="1"/> <!-- Module input channels -->
+            <param in_channels="2"/> <!-- Module input channels -->
             <param load_sound_model_ids="0x00012C1C, 0x0, 0x00012C14" />
             <param unload_sound_model_ids="0x00012C1C, 0x0, 0x00012C15" />
             <param confidence_levels_ids="0x00012C1C, 0x0, 0x00012C07" />
@@ -159,7 +169,7 @@
             <!-- "FLUENCE_QMIC". Param value is valid when adm_cfg_profile -->
             <!-- is FFECNS -->
             <!-- liuhaituo@MM.Audio, 2019/10/18, Modify mic config -->
-            <param fluence_type="FLUENCE_DMIC" />
+            <param fluence_type="FLUENCE_MIC" />
             <param execution_mode="ADSP" />
             <!-- lpi_mode: "NON_LPI_BARGE_IN", "NON_LPI", "LPI" -->
             <!-- NON_LPI_BARGE_IN: Default non-LPI mode type. lsm_usecase -->
@@ -403,7 +413,7 @@
         <param app_type="69947" />
         <param sample_rate="16000" />
         <param bit_width="16" />
-        <param out_channels="1"/>
+        <param out_channels="2"/>
     </adm_config>
 
     <adm_config>
