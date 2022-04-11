@@ -16,6 +16,58 @@ on boot
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
+on property:sys.usb.config=adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2769
+
+on property:sys.usb.config=mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x2768
+    write /config/usb_gadget/g1/idVendor 0x22D9
+
+on property:sys.usb.config=mtp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2764
+
+on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2765
+
+on property:sys.usb.config=ptp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2771
+
+on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2772
+
+on property:sys.usb.config=rndis,none && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276A
+
+on property:sys.usb.config=rndis,serial_cdev,diag && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2783
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276C
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,diag_mdm,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276E
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2767
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,diag,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2775
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2766
+
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
     group system
