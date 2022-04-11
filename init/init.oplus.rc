@@ -1,0 +1,14 @@
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on boot
+    # Display
+    chown system system /dev/oplus_display
+    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
+    chown system system /sys/kernel/oplus_display/dynamic_osc_clock
+    chown system system /sys/kernel/oplus_display/hbm
+    chown system system /sys/kernel/oplus_display/notify_fppress
+    chown system system /sys/kernel/oplus_display/panel_serial_number
