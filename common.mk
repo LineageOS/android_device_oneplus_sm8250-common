@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    OplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.oneplus
+    android.hardware.biometrics.fingerprint@2.3-service.oplus
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -298,7 +298,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oneplus
+    vendor.lineage.livedisplay@2.1-service.oplus
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -345,13 +345,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -382,7 +375,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oneplus
+    hardware/oplus
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -407,7 +400,7 @@ PRODUCT_BOOT_JARS += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus
+    vendor.lineage.touch@1.0-service.oplus
 
 # tri-state-key
 PRODUCT_PACKAGES += \
@@ -436,7 +429,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oneplus
+    vendor.qti.hardware.vibrator.service.oplus
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
