@@ -290,7 +290,9 @@ vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
+vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+vendor/etc/charger_fstab.qti
 
 # Charger firmware
 odm/firmware/fastchg/19063/oplus_vooc_fw.bin
@@ -1087,6 +1089,7 @@ system_ext/framework/qcrilhook.jar
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
+vendor/bin/init.mdm.sh
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/netmgrd
