@@ -289,6 +289,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.target.rc \
+    ueventd.oplus.rc \
     ueventd.qcom.rc
 
 # Keymaster
