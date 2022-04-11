@@ -12,3 +12,12 @@ on boot
     chown system system /sys/kernel/oplus_display/hbm
     chown system system /sys/kernel/oplus_display/notify_fppress
     chown system system /sys/kernel/oplus_display/panel_serial_number
+
+    # Sensors
+    chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
+
+service oplus_sensor_fb /odm/bin/oplus_sensor_fb
+    user system
+    group system
+    class late_start
+    oneshot
