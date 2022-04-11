@@ -191,41 +191,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-# Common init scripts
-PRODUCT_PACKAGES += \
-    ftm_power_config.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.oem.debug.rc \
-    init.oem.minidump.sdx55m.rc \
-    init.oem.rc \
-    init.oem.sec.rc \
-    init.oem_ftm.rc \
-    init.oplus.hw.rc \
-    init.oplus.hw.rc.recovery \
-    init.oplus_chg.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.factory.rc \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sdio.sh \
-    init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.ims.sh \
-    init.qti.qcv.sh \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    ueventd.qcom.rc \
-    vendor.oem_ftm.rc \
-    vendor.oem_ftm_svc_disable.rc
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
