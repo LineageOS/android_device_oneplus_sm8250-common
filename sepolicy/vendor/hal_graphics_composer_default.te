@@ -1,0 +1,4 @@
+binder_call(hal_graphics_composer_default, hal_graphics_composer_default)
+
+get_prop(hal_graphics_composer_default, system_oplus_project_prop)
+set_prop(hal_graphics_composer_default, vendor_display_prop)

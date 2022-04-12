@@ -1,0 +1,55 @@
+# Alert Slider
+/(vendor|system/vendor)/bin/tri-state-key-calibrate    u:object_r:tri-state-key-calibrate_exec:s0
+
+# Camera
+/mnt/vendor/persist/camera(/.*)?                     u:object_r:vendor_persist_camera_file:s0
+/mnt/vendor/persist/dual_camera_calibration(/.*)?    u:object_r:vendor_persist_camera_file:s0
+
+# Charging
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.oplus    u:object_r:hal_lineage_powershare_default_exec:s0
+
+# Display
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oplus    u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/dev/oplus_display                                                                 u:object_r:graphics_device:s0
+
+# Display (Pixelworks)
+/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service           u:object_r:hal_graphics_composer_default_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service    u:object_r:hal_graphics_composer_default_exec:s0
+
+# Engineering
+/mnt/vendor/persist/engineermode(/.*)?    u:object_r:vendor_persist_engineer_file:s0
+
+# Fingerprint
+/(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service           u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oplus    u:object_r:hal_fingerprint_default_exec:s0
+/dev/goodix_fp                                                                                   u:object_r:fingerprint_device:s0
+
+# Init
+/(odm|vendor/odm)/bin/init\.oplus\.sh    u:object_r:vendor_qti_init_shell_exec:s0
+
+# MDM
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm_oem_dycnvbk          u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm_oem_stanvbk          u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm1oemnvbktmp           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdmddr                   u:object_r:vendor_efs_boot_dev:s0
+
+# NFC
+/(odm|vendor/odm)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.2-service      u:object_r:hal_nfc_default_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.qti\.esepowermanager@1\.1-service    u:object_r:vendor_hal_esepowermanager_qti_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.qti\.secure_element@1\.2-service     u:object_r:hal_secure_element_default_exec:s0
+
+# Reserve
+/dev/block/platform/soc/1d84000\.ufshc/by-name/reserve4    u:object_r:vendor_reserve_partition:s0
+
+# Sensors
+/(odm|vendor/odm)/bin/oplus_sensor_fb    u:object_r:vendor_sensors_exec:s0
+/dev/ssc_interactive                     u:object_r:ssc_interactive_device:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oplus    u:object_r:hal_lineage_touch_default_exec:s0
+
+# Vibrator
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oplus    u:object_r:hal_vibrator_default_exec:s0
+
+# Widevine
+/(odm|vendor/odm)/bin/hw/android\.hardware\.drm@1\.3-service\.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
