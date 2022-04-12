@@ -1,0 +1,18 @@
+# Camera
+vendor.oplus.hardware.cammidasservice::IMIDASService    u:object_r:hal_camera_hwservice:s0
+
+# Display (Pixelworks)
+vendor.pixelworks.hardware.display::IIris           u:object_r:hal_graphics_composer_hwservice:s0
+vendor.pixelworks.hardware.feature::IIrisFeature    u:object_r:hal_graphics_composer_hwservice:s0
+
+# Fingerprint
+vendor.oplus.hardware.biometrics.fingerprint::IBiometricsFingerprint    u:object_r:hal_fingerprint_hwservice:s0
+vendor.oplus.hardware.commondcs::ICommonDcsHalService                   u:object_r:hal_fingerprint_hwservice:s0
+
+# ORMS
+vendor.oplus.hardware.orms::IOrmsHalProxy    u:object_r:vendor_hal_orms_hwservice:s0
+
+# Telephony
+vendor.oplus.hardware.appradio::IOplusAppRadio    u:object_r:hal_telephony_hwservice:s0
+vendor.oplus.hardware.ims::IOplusImsRadio         u:object_r:hal_telephony_hwservice:s0
+vendor.oplus.hardware.radio::IOplusRadio          u:object_r:hal_telephony_hwservice:s0
