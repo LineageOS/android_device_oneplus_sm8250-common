@@ -1,0 +1,6 @@
+allow vendor_rmt_storage vendor_proc_engineer:dir r_dir_perms;
+allow vendor_rmt_storage vendor_proc_engineer:file rw_file_perms;
+
+allow vendor_rmt_storage vendor_reserve_partition:blk_file rw_file_perms;
+
+r_dir_file(vendor_rmt_storage, vendor_proc_oplus_version)
