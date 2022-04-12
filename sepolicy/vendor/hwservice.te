@@ -1,5 +1,0 @@
-type hal_cameraHIDL_hwservice, hwservice_manager_type;
-type hal_display_hwservice, hwservice_manager_type;
-type hal_display_iris_hwservice, hwservice_manager_type;
-type hal_hdcpkey_hwservice, hwservice_manager_type;
-type hal_param_hwservice, hwservice_manager_type;
