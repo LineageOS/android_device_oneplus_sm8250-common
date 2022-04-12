@@ -1,0 +1,8 @@
+# Fingerprint
+vendor_internal_prop(vendor_fingerprint_prop)
+
+# Modem
+vendor_internal_prop(vendor_modem_prop)
+
+# RIL
+vendor_internal_prop(vendor_nw_exported_system_prop)
