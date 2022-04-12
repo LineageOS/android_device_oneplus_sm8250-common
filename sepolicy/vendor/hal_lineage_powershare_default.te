@@ -1,0 +1,2 @@
+allow hal_lineage_powershare_default vendor_proc_wireless:dir r_dir_perms;
+allow hal_lineage_powershare_default vendor_proc_wireless:file rw_file_perms;

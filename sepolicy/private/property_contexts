@@ -1,0 +1,8 @@
+# Fingerprint
+oplus.fingerprint.    u:object_r:system_fingerprint_prop:s0
+
+# Modem
+persist.sys.enable_modem_dump    u:object_r:exported_system_prop:s0
+
+# Version
+ro.separate.soft    u:object_r:system_oplus_project_prop:s0
