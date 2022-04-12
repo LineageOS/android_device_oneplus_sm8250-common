@@ -16,6 +16,10 @@ on boot
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
+on property:ro.boot.prjname=*
+    # Display
+    setprop ro.separate.soft ${ro.boot.prjname}
+
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2769
