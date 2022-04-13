@@ -23,6 +23,10 @@ persist.vendor.cne.feature=1
 # DPM
 persist.vendor.dpm.feature=9
 
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
+persist.vendor.overlay.izat.optin=rro
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -32,6 +36,7 @@ persist.dbg.wfc_avail_ovr=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
+vendor.mm.enable.qcom_parser=4044018
 
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
