@@ -1,7 +1,11 @@
 # Audio
 audio.offload.min.duration.secs=30
-persist.vendor.audio.hac.enable=false
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+
+# Bluetooth
+persist.bluetooth.bqr.choppy_threshold=9,6
+persist.bluetooth.bqr.event_mask=0x8000000E
+persist.bluetooth.bqr.min_interval_ms=60000
 
 # Camera
 camera.disable_zsl_mode=true
@@ -10,10 +14,8 @@ camera.disable_zsl_mode=true
 ro.charger.disable_init_blank=true
 
 # Display
-debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
-persist.vendor.color.matrix=2
 
 # CNE
 persist.vendor.cne.feature=1
@@ -26,33 +28,22 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
-# IOP
-vendor.iop.enable_prefetch_ofr=1
-vendor.iop.enable_uxe=0
-
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-
-# Netflix
-ro.netflix.bsp_rev=Q8250-19134-1
-
-# Perf
-ro.vendor.qti.core_ctl_max_cpu=4
-ro.vendor.qti.core_ctl_min_cpu=2
-
-# Radio
-ro.telephony.default_network=33,22
-
-# Touchscreen
-persist.vendor.qti.inputopts.enable=true
-persist.vendor.qti.inputopts.movetouchslop=0.6
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
 
 # Netmgr
-persist.vendor.data.iwlan.enable=true
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
+# Radio
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=33,22
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
