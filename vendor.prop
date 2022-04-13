@@ -141,9 +141,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
-
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
