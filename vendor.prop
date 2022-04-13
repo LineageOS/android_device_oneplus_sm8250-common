@@ -166,10 +166,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
-persist.vendor.overlay.izat.optin=rro
-
 # Graphics
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
@@ -191,7 +187,6 @@ ro.incremental.enable=yes
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
-vendor.mm.enable.qcom_parser=4044018
 
 # NFC
 ro.camera.notify_nfc=1
