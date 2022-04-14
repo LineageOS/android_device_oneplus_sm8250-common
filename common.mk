@@ -273,12 +273,15 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/sn100x
+
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2.vendor \
     android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     NfcNci \
     nqnfcinfo \
+    vendor.nxp.hardware.nfc@2.0-service \
     Tag
 
 PRODUCT_COPY_FILES += \
