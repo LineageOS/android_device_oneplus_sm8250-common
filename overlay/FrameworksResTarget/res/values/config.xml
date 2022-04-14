@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Linux Foundation
+     SPDX-License-Identifier: BSD-3-Clause
+-->
+<resources>
+
+    <!-- Control whether the always on display mode is available. This should only be enabled on
+         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
+         states. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+         on the headphone/microphone jack. When false use the older uevent framework. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- Idle current for bluetooth controller. 0 by default -->
+    <integer name="config_bluetooth_idle_cur_ma">6</integer>
+
+    <!-- Operating volatage for bluetooth controller. 0 by default -->
+    <integer name="config_bluetooth_operating_voltage_mv">3700</integer>
+
+    <!-- Rx current for bluetooth controller. 0 by default-->
+    <integer name="config_bluetooth_rx_cur_ma">28</integer>
+
+    <!-- Tx current for bluetooth controller. 0 by default -->
+    <integer name="config_bluetooth_tx_cur_ma">36</integer>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm64/boot-framework.oat</item>
+        <item>/system/framework/arm/boot-framework.oat</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-core-libart.oat</item>
+        <item>/apex/com.android.art/javalib/arm/boot-core-libart.oat</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-okhttp.oat</item>
+        <item>/apex/com.android.art/javalib/arm/boot-okhttp.oat</item>
+        <item>/apex/com.android.art/javalib/arm64/boot.vdex</item>
+        <item>/apex/com.android.art/javalib/arm/boot.vdex</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-core-libart.vdex</item>
+        <item>/apex/com.android.art/javalib/arm/boot-core-libart.vdex</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-core-libart.art</item>
+        <item>/apex/com.android.art/javalib/arm/boot-core-libart.art</item>
+        <item>/system/framework/framework-res.apk</item>
+        <item>/system/lib64/libhwui.so</item>
+        <item>/system/lib/libhwui.so</item>
+        <item>/system/framework/boot-framework.vdex</item>
+        <item>/system/framework/oat/arm64/services.vdex</item>
+        <item>/system/framework/oat/arm64/services.odex</item>
+        <item>/apex/com.android.art/javalib/arm64/boot.oat</item>
+        <item>/apex/com.android.art/javalib/arm/boot.oat</item>
+        <item>/system/framework/telephony-common.jar</item>
+        <item>/system/framework/arm64/boot-telephony-common.art</item>
+        <item>/system/lib64/libsurfaceflinger.so</item>
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+    </string-array>
+
+     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+          and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item>
+    </string-array>
+
+     <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
+     <bool name="config_telephony5gStandalone">true</bool>
+
+     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
+     <bool name="config_telephony5gNonStandalone">true</bool>
+
+</resources>
