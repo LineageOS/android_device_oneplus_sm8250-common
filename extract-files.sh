@@ -66,6 +66,10 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/etc/libnfc-mtp-SN100.conf)
+            sed -i "s/^NXP_RF_CONF_BLK_9/#NXP_RF_CONF_BLK_9/" "${2}"
+            sed -i "s/^NXP_RF_CONF_BLK_10/#NXP_RF_CONF_BLK_10/" "${2}"
+            ;;
         vendor/lib64/hw/com.qti.chi.override.so)
             "${SIGSCAN}" -p "9B 2B 04 94" -P "1F 20 03 D5" -f "${2}"
             "${SIGSCAN}" -p "46 23 04 94" -P "1F 20 03 D5" -f "${2}"
