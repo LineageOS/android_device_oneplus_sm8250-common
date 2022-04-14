@@ -79,6 +79,16 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && pro
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2766
 
+# Radio
+on property:vendor.radio.multisim.config=*
+    setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
+
+service oplus-sh /odm/bin/init.oplus.sh
+    class late_start
+    user system
+    group system radio
+    oneshot
+
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
     group system
