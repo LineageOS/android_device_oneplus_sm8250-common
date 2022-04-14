@@ -52,6 +52,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.oplus.sh",
+    src: "init.oplus.sh",
+    device_specific: true,
+}
+
+sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "init.qcom.early_boot.sh",
     vendor: true,
