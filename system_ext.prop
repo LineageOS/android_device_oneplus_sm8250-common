@@ -1,7 +1,3 @@
-# Audio
-audio.offload.min.duration.secs=30
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
-
 # Bluetooth
 persist.bluetooth.bqr.choppy_threshold=9,6
 persist.bluetooth.bqr.event_mask=0x8000000E
