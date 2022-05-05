@@ -172,10 +172,6 @@ debug.stagefright.omx_default_rank=0
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
-# PASR
-vendor.pasr.activemode.enabled=true
-vendor.power.pasr.enabled=false
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
