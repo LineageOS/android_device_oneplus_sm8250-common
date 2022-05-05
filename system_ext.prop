@@ -7,9 +7,6 @@ persist.bluetooth.bqr.choppy_threshold=9,6
 persist.bluetooth.bqr.event_mask=0x8000000E
 persist.bluetooth.bqr.min_interval_ms=60000
 
-# Camera
-camera.disable_zsl_mode=true
-
 # Charger
 ro.charger.disable_init_blank=true
 
