@@ -132,26 +132,17 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     liba2dpoffload \
-    libaudiopreprocessing \
     libbatterylistener \
-    libbundlewrapper \
-    libcirrusspkrprot \
     libcomprcapture \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
     libexthwplugin \
     libhdmiedid \
     libhfp \
-    libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libreverbwrapper \
     libsndmonitor \
     libspkrprot \
     libssrec \
-    libvisualizer \
     libvolumelistener
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
