@@ -18,7 +18,6 @@ persist.vendor.dpm.feature=9
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
-persist.vendor.overlay.izat.optin=rro
 
 # IMS
 persist.dbg.volte_avail_ovr=1
