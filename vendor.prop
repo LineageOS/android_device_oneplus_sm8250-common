@@ -96,11 +96,6 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 vendor.qcom.bluetooth.soc=hastings
 
-# Camera
-persist.vendor.camera.privapp.list=com.oneplus.camera,com.oppo.camera,com.oppo.engineermode,com.oplus.camera
-vendor.camera.algo.jpeghwencode=0
-vendor.camera.aux.packagelist=android,com.oneplus.camera,com.oppo.camera,com.oppo.engineermode,com.oplus.camera
-
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
