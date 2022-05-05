@@ -7,9 +7,6 @@ persist.bluetooth.bqr.choppy_threshold=9,6
 persist.bluetooth.bqr.event_mask=0x8000000E
 persist.bluetooth.bqr.min_interval_ms=60000
 
-# Charger
-ro.charger.disable_init_blank=true
-
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
