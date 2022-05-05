@@ -170,10 +170,6 @@ ro.camera.notify_nfc=1
 # OTG
 persist.sys.oem.otg_support=true
 
-# PASR
-vendor.pasr.activemode.enabled=true
-vendor.power.pasr.enabled=false
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
