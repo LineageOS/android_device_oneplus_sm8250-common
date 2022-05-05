@@ -170,10 +170,6 @@ ro.incremental.enable=yes
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
-# PASR
-vendor.pasr.activemode.enabled=true
-vendor.power.pasr.enabled=false
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
