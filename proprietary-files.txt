@@ -636,7 +636,6 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # GNSS
-odm/etc/gps.conf
 odm/etc/izat.conf
 odm/etc/sap.conf
 -vendor/app/CACertService/CACertService.apk
