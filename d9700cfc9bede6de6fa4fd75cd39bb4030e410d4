@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28e05b32_fc1e0aca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7202
+      },
+      "writtenOn": "2022-05-25T21:06:27Z",
+      "side": 1,
+      "message": "LGTM. Op8Pro.",
+      "revId": "d9700cfc9bede6de6fa4fd75cd39bb4030e410d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
