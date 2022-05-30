@@ -33,6 +33,24 @@
       "message": "OG change is: https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm8150-common/+/331992",
       "revId": "feee607292311959c4bb0c45ac20f16354c3a92f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16ae5c0a_36292be2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7202
+      },
+      "writtenOn": "2022-05-30T19:41:40Z",
+      "side": 1,
+      "message": "Commit message updated.",
+      "parentUuid": "bfb1065d_e49064a5",
+      "revId": "feee607292311959c4bb0c45ac20f16354c3a92f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
