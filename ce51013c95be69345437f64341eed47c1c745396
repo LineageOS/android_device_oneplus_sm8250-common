@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "119000eb_4b8a4ec4",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-06-02T22:03:47Z",
+      "side": 1,
+      "message": "This isn\u0027t used by anything in vendor",
+      "revId": "ce51013c95be69345437f64341eed47c1c745396",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
