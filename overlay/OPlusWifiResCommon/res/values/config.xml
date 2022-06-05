@@ -8,4 +8,62 @@
     <!-- Do not translate. Default access point SSID used for tethering. -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">OnePlus</string>
 
+    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
+    <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </integer-array>
+
+    <!--
+    Controls the mapping between RSSI and RSSI levels.
+
+    RSSI                                    RSSI Level
+    (-infinity, thresholds[0])                       0
+    [threshold[0], threshold[1])                     1
+    [threshold[1], threshold[2])                     2
+    ...                                            ...
+    [threshold[len-2], threshold[len-1])         len-1
+    [threshold[len-1], +infinity)                  len
+
+    where:
+        [a, b) is the range of integers `n` such that a <= n < b
+        `threshold[i]` represents the i'th element of the config_wifiRssiLevelThresholds array
+        and `len` is the length of the config_wifiRssiLevelThresholds array.
+    -->
+    <integer-array name="config_wifiRssiLevelThresholds">
+        <item>-93</item>
+        <item>-82</item>
+        <item>-74</item>
+        <item>-64</item>
+    </integer-array>
+
+    <!-- Boolean indicating whether or not to reset max client setting configuration during cloud configuration restore -->
+    <bool name="config_wifiSoftapResetMaxClientSettingConfig">false</bool>
+
+    <!-- List of constants that indicate the number of consecutive failures per type needed to block a BSSID.
+    A blocked BSSID will not be considered in network selection and firmware roaming.-->
+    <integer name="config_wifiBssidBlocklistMonitorWrongPasswordThreshold">3</integer>
+
+    <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
+    <integer name="config_wifiDelayDisconnectOnImsLostMs">2000</integer>
+
+    <!-- The duration in minutes to strongly favor the last-selected network over other options. -->
+    <integer name="config_wifiFrameworkLastSelectionMinutes">0</integer>
+
+    <!-- Integer duration after connection that a user-selected network is considered sufficient (milliseconds) -->
+    <integer name="config_wifiSufficientDurationAfterUserSelectionMilliseconds">0</integer>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers">524288,1048576,4525824,524288,1048576,4525824</string>
+
 </resources>
