@@ -1,6 +1,14 @@
 # Fingerprint
 oplus.fingerprint.    u:object_r:system_fingerprint_prop:s0
 
+# Logging
+persist.camera.assert.panic         u:object_r:exported_system_prop:s0
+persist.camera.OverrideLogLevels    u:object_r:exported_system_prop:s0
+persist.sys.assert.panic            u:object_r:exported_system_prop:s0
+persist.sys.log.ae                  u:object_r:exported_system_prop:s0
+persist.sys.log.af                  u:object_r:exported_system_prop:s0
+persist.sys.log.awb                 u:object_r:exported_system_prop:s0
+
 # Modem
 persist.sys.enable_modem_dump    u:object_r:exported_system_prop:s0
 
