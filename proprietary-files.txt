@@ -859,7 +859,7 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-odm/etc/nfc/libnfc-mtp-SN100.conf_19805:vendor/etc/libnfc-mtp-SN100.conf
+odm/etc/nfc/libnfc-mtp-SN100.conf_19805:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_19805:vendor/etc/libnfc-nci.conf
 odm/lib/libsn100u_fw.so:vendor/lib/libsn100u_fw.so
 
