@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+on fs
+    # Update touchpanel firmware in case we ship newer firmware in /odm
+    write /proc/touchpanel/tp_fw_update 0
+
 on early-boot
     # Radio
     exec_start oplus-sh
