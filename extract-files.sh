@@ -60,6 +60,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service)
+            "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
+            ;;
+        odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml)
+            sed -ni "/android.hardware.biometrics.fingerprint/{x;s/hal format/hal override=\"true\" format/;x};x;1!p;\${x;p}" "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
