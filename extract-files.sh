@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml)
+            sed -ni "/android.hardware.biometrics.fingerprint/{x;s/hal format/hal override=\"true\" format/;x};x;1!p;\${x;p}" "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
