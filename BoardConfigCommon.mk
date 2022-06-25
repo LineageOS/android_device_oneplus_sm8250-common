@@ -186,9 +186,7 @@ VENDOR_SECURITY_PATCH := 2022-07-05
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
