@@ -28,11 +28,10 @@
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+    <string name="config_mms_user_agent" translatable="false">g013c</string>
 
-    <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false"
-            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <!-- MMS user agent profile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/G013C.xml</string>
 
      <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
