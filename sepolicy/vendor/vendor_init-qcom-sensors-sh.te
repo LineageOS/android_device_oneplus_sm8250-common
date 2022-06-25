@@ -1,2 +1,0 @@
-allow vendor_init-qcom-sensors-sh vendor_persist_sensors_file:dir setattr;
-allow vendor_init-qcom-sensors-sh vendor_persist_sensors_file:file setattr;
