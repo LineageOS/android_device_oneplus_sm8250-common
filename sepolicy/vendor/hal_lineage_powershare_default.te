@@ -1,2 +1,0 @@
-allow hal_lineage_powershare_default procfs_oem_wireless:dir search;
-allow hal_lineage_powershare_default procfs_oem_wireless:file rw_file_perms;
