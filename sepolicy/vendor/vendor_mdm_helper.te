@@ -1,6 +1,0 @@
-allow vendor_mdm_helper vendor_modem_efs_partition_device:blk_file rw_file_perms;
-
-r_dir_file(vendor_mdm_helper, vendor_proc_engineer)
-r_dir_file(vendor_mdm_helper, vendor_proc_oplus_version)
-
-set_prop(vendor_mdm_helper, vendor_modem_prop)

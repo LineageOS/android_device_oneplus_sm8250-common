@@ -1,3 +1,0 @@
-allow hal_nfc_default vendor_nfc_vendor_data_file:dir search;
-
-set_prop(hal_nfc_default, vendor_nfc_nq_prop)
