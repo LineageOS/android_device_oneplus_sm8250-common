@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3d0eaeb_b59a71b9",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 2282,
+      "author": {
+        "id": 16908
+      },
+      "writtenOn": "2022-06-30T17:43:12Z",
+      "side": 1,
+      "message": "Missing vendor/lib64/vendor.qti.hardware.vpp@1.4.so",
+      "revId": "f2f6308cb6428548fdcb006eb0737a8839dd2cfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
