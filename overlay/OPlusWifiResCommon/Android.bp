@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "OPlusWifiResCommon",
-    device_specific: true,
+    vendor: true,
 }
