@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac7e11e5_b0f37db6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31373
+      },
+      "writtenOn": "2022-07-10T07:22:44Z",
+      "side": 1,
+      "message": "This probably breaks safetynet so shouldn\u0027t we try patching the blob so that it looks for some other prop instead of ro.boot.vbmeta.device_state ?",
+      "revId": "41865fdc168f984d9910091a0542c9ac54cd069c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
