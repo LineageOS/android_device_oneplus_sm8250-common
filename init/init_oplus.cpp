@@ -44,6 +44,8 @@ void vendor_load_properties() {
                 OverrideProperty("ro.product.product.model", "KB2000");
             } else if (device == "OnePlus8Pro") {
                 OverrideProperty("ro.product.product.model", "IN2020");
+            } else if (device == "OnePlus9R") {
+                OverrideProperty("ro.product.product.model", "LE2100");
             }
             break;
         case 12: // TMO
@@ -62,6 +64,8 @@ void vendor_load_properties() {
                 OverrideProperty("ro.product.product.model", "KB2001");
             } else if (device == "OnePlus8Pro") {
                 OverrideProperty("ro.product.product.model", "IN2021");
+            } else if (device == "OnePlus9R") {
+                OverrideProperty("ro.product.product.model", "LE2101");
             }
             break;
         case 14: // EU
