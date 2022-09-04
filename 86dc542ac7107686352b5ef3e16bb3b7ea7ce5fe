@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11e00038_9c078fe0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7202
+      },
+      "writtenOn": "2022-09-04T12:57:08Z",
+      "side": 1,
+      "message": "I can confirm this commit is not required after latest kernel commits pack.",
+      "revId": "86dc542ac7107686352b5ef3e16bb3b7ea7ce5fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
