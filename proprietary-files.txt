@@ -184,7 +184,7 @@ vendor/lib64/camera/CFR_para2_OnePlus_EF017_UW_snapshot.bin
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
 vendor/lib64/camera/com.qti.tuned.default.bin
 vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so|bd4b2dd16eb256c278eafb0e224bb9b6885064dd|14cbbf8f88393d721851240ba89214988981accc
+vendor/lib64/hw/com.qti.chi.override.so|bd4b2dd16eb256c278eafb0e224bb9b6885064dd|b62515b12ce72a7c615ebaccd3630eb555f79520
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.frameselect.so
