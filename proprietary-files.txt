@@ -800,7 +800,7 @@ odm/lib64/libpwirisfeature.so
 odm/lib64/libpwirishalwrapper.so
 odm/lib64/libpwirispq.so
 odm/lib64/libpwirisservice.so
-odm/lib64/libpwirissoft.so
+odm/lib64/libpwirissoft.so|e6fddaebca2981a09a46cf5397d47379b455228a|c0c3eb5df1210030190f634eceded4e3daff8506
 odm/lib64/libpwsnapdragoncolor.so
 odm/lib64/libpwsoftirisPCS.so
 odm/lib64/vendor.pixelworks.hardware.display@1.0.so
