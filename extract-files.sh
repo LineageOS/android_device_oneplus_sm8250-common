@@ -69,6 +69,9 @@ function blob_fixup() {
         odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml)
             sed -ni "/android.hardware.biometrics.fingerprint/{x;s/hal format/hal override=\"true\" format/;x};x;1!p;\${x;p}" "${2}"
             ;;
+        odm/lib64/libpwirissoft.so)
+            "${SIGSCAN}" -p "72 1F 00 94" -P "1F 20 03 D5" -f "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
