@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e38c96dc_51de6dae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29242
+      },
+      "writtenOn": "2022-10-15T00:41:21Z",
+      "side": 1,
+      "message": "per my testing on 8Pro, this seems to work without any negative impact.\n\nTest 1: Boot, unlock, turn display off and then back on, change color mode and observe no brightness limitation.\n\nTest 2: Boot, unlock, turn display off and then back on, start HDR video in YouTube, close video to switch back to sdr, observe no brightness limitation.",
+      "revId": "7b31d6b02bb98dfc6a224ef829b9cbb2c72c5cb3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
