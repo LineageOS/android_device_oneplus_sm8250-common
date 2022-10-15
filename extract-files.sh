@@ -61,7 +61,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service)
-            "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
+            grep -q libshims_fingerprint.oplus.so "${2}" || "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
             ;;
         odm/etc/init/wlchgmonitor.rc)
             sed -i "/disabled/d;/seclabel/d" "${2}"
