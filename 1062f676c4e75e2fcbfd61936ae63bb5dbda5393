@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35a30012_1e94b766",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19665
+      },
+      "writtenOn": "2022-10-17T16:19:02Z",
+      "side": 1,
+      "message": "validated by a kebab user that this doesn\u0027t cause immediate regressions, ready to go",
+      "revId": "1062f676c4e75e2fcbfd61936ae63bb5dbda5393",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
