@@ -4,11 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on fs
+on init
     # Charger
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
 
+on fs
     # Update touchpanel firmware in case we ship newer firmware in /odm
     write /proc/touchpanel/tp_fw_update 0
 
