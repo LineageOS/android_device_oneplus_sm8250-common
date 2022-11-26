@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8 Pro (IN2025_11.C.33).
+## from OnePlus 8 Pro (IN2025_11.C.36).
 
 # ACDBs
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -136,6 +136,7 @@ vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
 vendor/lib/libnightvision.so
 vendor/lib64/camera/components/com.oneplus.node.memcpy.so
+vendor/lib64/camera/components/com.oneplus.node.omoji.so
 vendor/lib64/camera/components/com.oneplus.node.preview.so
 vendor/lib64/camera/components/com.oneplus.node.preview_nv.so
 vendor/lib64/camera/components/com.oneplus.node.rtb.so
