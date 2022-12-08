@@ -58,6 +58,13 @@ on property:sys.boot_completed=1
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 300: msm_drm
+    # IRQ 338: kgsl_3d0_irq
+    write /proc/irq/300/smp_affinity_list 2
+    write /proc/irq/338/smp_affinity_list 1
+
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2769
