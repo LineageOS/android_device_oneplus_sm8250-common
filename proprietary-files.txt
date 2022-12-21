@@ -120,6 +120,7 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
+odm/bin/vl53l1_daemon_main
 odm/etc/camera/fb_default
 odm/etc/camera/fwk_config.json
 odm/lib64/camera/components/com.qti.stats.pdlib.so
@@ -131,6 +132,8 @@ odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/libSonyIMX471RmscLibrary.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
+odm/lib64/libvl53l1_daemon.so
+odm/lib64/sensors.hal.tof.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
