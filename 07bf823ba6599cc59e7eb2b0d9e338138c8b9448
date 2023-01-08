@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd963892_259e5f59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-01-08T18:54:10Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm8250-common/+/344146",
+      "revId": "07bf823ba6599cc59e7eb2b0d9e338138c8b9448",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
