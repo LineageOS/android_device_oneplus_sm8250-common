@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8 Pro (IN2025_11.F.15).
+## from OnePlus 8 Pro (IN2025_11.F.62).
 
 # ACDBs
 vendor/etc/acdbdata/adsp_avs_config.acdb
