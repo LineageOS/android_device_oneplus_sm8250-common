@@ -84,6 +84,11 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Fingerprint
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 
+# Health
+TARGET_HEALTH_CHARGING_CONTROL_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
+TARGET_HEALTH_CHARGING_CONTROL_ENABLE := 1
+TARGET_HEALTH_CHARGING_CONTROL_DISABLE := 0
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
