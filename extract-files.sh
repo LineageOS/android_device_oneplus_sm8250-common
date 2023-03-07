@@ -78,10 +78,6 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
-        vendor/etc/libnfc-nxp.conf)
-            sed -i "s/^NXP_RF_CONF_BLK_9/#NXP_RF_CONF_BLK_9/" "${2}"
-            sed -i "s/^NXP_RF_CONF_BLK_10/#NXP_RF_CONF_BLK_10/" "${2}"
-            ;;
         vendor/lib64/hw/com.qti.chi.override.so)
             grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
             sed -i "s/com.oem.autotest/\x00om.oem.autotest/" "${2}"
