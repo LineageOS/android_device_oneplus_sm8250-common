@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8 Pro (IN2025_11.F.64).
+## from OnePlus 8 Pro (IN2025_13.1.0.513(EX01)).
 
 # ACDBs
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -132,7 +132,7 @@ odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
 odm/lib64/libvl53l1_daemon.so
 odm/lib64/sensors.hal.tof.so
-odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
+odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
 vendor/lib/libnightvision.so
@@ -255,6 +255,7 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libdualcam_video_optical_zoom.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libmidasserviceintf.so
+vendor/lib64/libmidasserviceintf_aidl.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
@@ -578,7 +579,9 @@ odm/lib64/libgf_hal_20828_G6_7_oplus.so
 odm/lib64/libgf_hal_G5_oplus.so
 odm/lib64/libgf_hal_G6_oplus.so
 odm/lib64/libgf_ud_hal_20801_G3_oplus.so
-odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
+odm/lib64/libolc_vnd.so
+odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -700,8 +703,8 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
-my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
-my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+my_product/priv-app/HotwordEnrollmentOKGoogle.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogle.apk
+my_product/priv-app/HotwordEnrollmentXGoogle.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogle.apk
 
 # IMS - from renoir - 22.5.11
 system_ext/app/ImsRcsService/ImsRcsService.apk|d03d3142f3518e755d02ace26b17170218ed8b4b
@@ -915,7 +918,9 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libswvdec.so
 
 # Osense
+odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensehalclient.so
+odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 
 # Peripheral manager
@@ -925,6 +930,8 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
 # Perf
+odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/perf/commonresourceconfigs.xml
