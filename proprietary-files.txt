@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8 Pro (IN2025_13.1.0.580(EX01)).
+## from OnePlus 8 Pro (IN2025_13.1.0.582(EX01)).
 
 # ACDBs
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -413,7 +413,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/bin/feature_enabler_client
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/OPlus_QC_LTM_Commercial_SM8250_2020_02_07.pfm
-vendor/etc/Oppo_QC_LTM_Commercial_2020_01_03.pfm
+vendor/etc/Oppo_QC_LTM_Commercial_SM8250_2020_01_15.pfm
 
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
