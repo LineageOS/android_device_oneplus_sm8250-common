@@ -14,9 +14,6 @@ debug.sf.latch_unsignaled=1
 # CNE
 persist.vendor.cne.feature=1
 
-# Charging
-ro.charger.enable_suspend=1
-
 # DPM
 persist.vendor.dpm.feature=9
 
