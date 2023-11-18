@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83aba3e4_5c3e398b",
+        "filename": "init/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-11-18T10:51:41Z",
+      "side": 0,
+      "message": "funfact, this was set to 0-7 on stock rom with comment:\n\"modify by hongbo.dai@Camera, for camera performace issue\"",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 44
+      },
+      "revId": "c07067a3e8bbaa1844f6676ea7844d022b2f98d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
