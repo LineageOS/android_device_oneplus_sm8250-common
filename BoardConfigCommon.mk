@@ -195,5 +195,8 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Include the common Oplus BoardConfig.
+include hardware/oplus/BoardConfigOplus.mk
+
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8250-common/BoardConfigVendor.mk
