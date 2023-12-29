@@ -82,6 +82,13 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/etc/libnfc-nci.conf)
+            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
+            ;;
+        vendor/etc/libnfc-nxp.conf)
+            sed -i "/NXPLOG_\w\+_LOGLEVEL/ s/0x03/0x02/" "${2}"
+            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
+            ;;
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
