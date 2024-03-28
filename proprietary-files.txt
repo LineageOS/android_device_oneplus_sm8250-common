@@ -341,7 +341,7 @@ odm/firmware/fastchg/2169A/oplus_vooc_fw_rk826.bin
 odm/firmware/fastchg/2169B/oplus_vooc_fw_rk826.bin
 
 # CNE
-vendor/app/CneApp/CneApp.apk
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
 vendor/bin/mutualex
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
