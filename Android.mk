@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -36,12 +36,5 @@ $(ACDBDATA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $@
 	$(hide) ln -sf /vendor/etc/acdbdata/adsp_avs_config.acdb $@/adsp_avs_config.acdb
 
-WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
-$(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wifi firmware symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/qca6390/wlan_mac.bin $@/wlan_mac.bin
-
-ALL_DEFAULT_INSTALLED_MODULES +=  $(ACDBDATA_SYMLINKS) $(WIFI_FIRMWARE_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES +=  $(ACDBDATA_SYMLINKS)
 endif
