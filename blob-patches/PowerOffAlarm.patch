@@ -1,0 +1,65 @@
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" coreApp="true" package="com.qualcomm.qti.poweroffalarm" platformBuildVersionCode="33" platformBuildVersionName="13">
++    <permission android:description="@string/permdesc_power_off_alarm" android:icon="@drawable/permic_power_off_alarm" android:label="@string/permlab_power_off_alarm" android:name="org.codeaurora.permission.POWER_OFF_ALARM" android:protectionLevel="dangerous"/>
+     <application android:allowBackup="false" android:defaultToDeviceProtectedStorage="true" android:extractNativeLibs="true" android:label="@string/app_name">
+-        <receiver android:directBootAware="true" android:exported="true" android:label="PowerOffAlarmBroadcastReceiver" android:name=".PowerOffAlarmBroadcastReceiver" android:permission="oplus.permission.OPLUS_COMPONENT_SAFE">
++        <receiver android:directBootAware="true" android:exported="true" android:label="PowerOffAlarmBroadcastReceiver" android:name=".PowerOffAlarmBroadcastReceiver" android:permission="org.codeaurora.permission.POWER_OFF_ALARM">
+             <intent-filter android:priority="1000">
+                 <action android:name="org.codeaurora.poweroffalarm.action.CANCEL_ALARM"/>
+                 <action android:name="org.codeaurora.poweroffalarm.action.SET_ALARM"/>
+--- /dev/null
++++ b/res/drawable/permic_power_off_alarm.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#ff038477" android:pathData="M23.9,4.6L18.4,0l-1.5,1.8l5.5,4.6L23.9,4.6zM7.1,1.9L5.6,0.1L0.1,4.6l1.5,1.8L7.1,1.9zM12.6,7.4h-1.8v7.1l5.6,3.4l1,-1.4l-4.8,-2.9V7.4zM12,2.6C6,2.6 1.3,7.4 1.3,13.3S6,24 12,24s10.7,-4.8 10.7,-10.7S17.9,2.6 12,2.6zM12,21.6c-4.6,0 -8.3,-3.7 -8.3,-8.3S7.3,5 12,5s8.3,3.7 8.3,8.3S16.6,21.6 12,21.6z" />
++</vector>
+\ No newline at end of file
+--- a/res/values-ar-rXB/strings.xml
++++ b/res/values-ar-rXB/strings.xml
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <string name="app_name">‏‮PowerOffAlarm‬‏</string>
++    <string name="permdesc_power_off_alarm">‏‮set‬‏ ‏‮and‬‏ ‏‮clear‬‏ ‏‮the‬‏ ‏‮alarm‬‏ ‏‮which‬‏ ‏‮will‬‏ ‏‮wake‬‏ ‏‮up‬‏ ‏‮device‬‏ ‏‮from‬‏ ‏‮the‬‏ ‏‮power‬‏ ‏‮off‬‏ ‏‮state‬‏</string>
+     <string name="permlab_power_off_alarm">‏‮Power‬‏ ‏‮Off‬‏ ‏‮Alarm‬‏</string>
+ </resources>
+--- a/res/values-en-rXA/strings.xml
++++ b/res/values-en-rXA/strings.xml
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <string name="app_name">[ÞöŵéŕÖƒƒÅļåŕḿ one two]</string>
++    <string name="permdesc_power_off_alarm">[šéţ åñð çļéåŕ ţĥé åļåŕḿ ŵĥîçĥ ŵîļļ ŵåķé ûþ ðéVîçé ƒŕöḿ ţĥé þöŵéŕ öƒƒ šţåţé one two three four five six seven eight]</string>
+     <string name="permlab_power_off_alarm">[Þöŵéŕ Öƒƒ Åļåŕḿ one two three]</string>
+ </resources>
+--- a/res/values-zh-rCN/strings.xml
++++ b/res/values-zh-rCN/strings.xml
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <string name="app_name">关机闹钟</string>
++    <string name="permdesc_power_off_alarm">设置和清除关机闹钟时间（关机 闹钟可以唤醒在关机状态下的手机）</string>
+     <string name="permlab_power_off_alarm">关机闹钟</string>
+ </resources>
+--- a/res/values/public.xml
++++ b/res/values/public.xml
+@@ -2,4 +2,5 @@
+ <resources>
+     <public type="string" name="app_name" id="0x7f010000" />
+     <public type="string" name="permlab_power_off_alarm" id="0x7f010001" />
++    <public type="string" name="permdesc_power_off_alarm" id="0x7f010002" />
+ </resources>
+\ No newline at end of file
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <string name="app_name">PowerOffAlarm</string>
++    <string name="permdesc_power_off_alarm">set and clear the alarm which will wake up device from the power off state</string>
+     <string name="permlab_power_off_alarm">Power Off Alarm</string>
+ </resources>
