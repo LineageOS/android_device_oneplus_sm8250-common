@@ -1,0 +1,12 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 672d370..1237318 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" coreApp="true" package="com.qualcomm.qti.poweroffalarm" platformBuildVersionCode="33" platformBuildVersionName="13">
+     <application android:allowBackup="false" android:defaultToDeviceProtectedStorage="true" android:extractNativeLibs="true" android:label="@string/app_name">
+-        <receiver android:directBootAware="true" android:exported="true" android:label="PowerOffAlarmBroadcastReceiver" android:name=".PowerOffAlarmBroadcastReceiver" android:permission="oplus.permission.OPLUS_COMPONENT_SAFE">
++        <receiver android:directBootAware="true" android:exported="true" android:label="PowerOffAlarmBroadcastReceiver" android:name=".PowerOffAlarmBroadcastReceiver" android:permission="org.codeaurora.permission.POWER_OFF_ALARM">
+             <intent-filter android:priority="1000">
+                 <action android:name="org.codeaurora.poweroffalarm.action.CANCEL_ALARM"/>
+                 <action android:name="org.codeaurora.poweroffalarm.action.SET_ALARM"/>
