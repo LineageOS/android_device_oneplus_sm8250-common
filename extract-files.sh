@@ -76,6 +76,9 @@ function blob_fixup() {
         odm/lib64/libpwirissoft.so)
             "${SIGSCAN}" -p "72 1F 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+        product/app/PowerOffAlarm/PowerOffAlarm.apk)
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/PowerOffAlarm.patch" -s
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
