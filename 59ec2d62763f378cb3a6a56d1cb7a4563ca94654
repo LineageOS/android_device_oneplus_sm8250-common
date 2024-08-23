@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21743740_46ebced9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-08-23T23:05:59Z",
+      "side": 1,
+      "message": "No QtiTelephony.apk anymore either?",
+      "revId": "59ec2d62763f378cb3a6a56d1cb7a4563ca94654",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
