@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0862f11a_e5461157",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-08-24T10:39:39Z",
+      "side": 1,
+      "message": "```\n$ rg ro.telephony.default_network **/*.prop\nmy_region/build.prop\n23:ro.telephony.default_network\u003d26,22\n\nmy_product/build.prop\n6:ro.telephony.default_network\u003d27,26\n\nsystem/build.prop\n81:ro.telephony.default_network\u003d33,33\n```\n\nand it\u0027s exactly the same on 8350, so w/e.",
+      "revId": "0bccaaab61ce00f8a60a333d8cc8034879a5b976",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
