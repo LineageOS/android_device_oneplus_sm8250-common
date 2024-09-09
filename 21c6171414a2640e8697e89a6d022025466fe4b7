@@ -16,6 +16,24 @@
       "message": "You shouldn\u0027t need MODULE_SUFFIX here, this looks like a more proper fix https://review.lineageos.org/c/LineageOS/android_device_fairphone_FP5/+/400310\n\nAlso why are elf checks disabled?",
       "revId": "21c6171414a2640e8697e89a6d022025466fe4b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7979372d_3aa535e3",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 424,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-09-09T21:01:00Z",
+      "side": 1,
+      "message": "\u003eYou shouldn\u0027t need MODULE_SUFFIX here, this looks like a more proper fix https://review.lineageos.org/c/LineageOS/android_device_fairphone_FP5/+/400310\n\nbuild/make/core/base_rules.mk:300: error: hardware/qcom-caf/sm8250/display/composer: MODULE.TARGET.EXECUTABLES.vendor\n.qti.hardware.display.composer-service already defined by vendor/oneplus/sm8250-common.\n\n\u003eAlso why are elf checks disabled?\n\nDT_NEEDED \"libgrallocutils.so\" is not specified in shared_libs.\nDT_NEEDED \"libgpu_tonemapper.so\" is not specified in shared_libs.",
+      "parentUuid": "e9f9c893_6ad5b122",
+      "revId": "21c6171414a2640e8697e89a6d022025466fe4b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
