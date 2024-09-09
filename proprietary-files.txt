@@ -13,10 +13,10 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP modules
-odm/lib/rfsa/adsp/hta_lib/libhta_dsp_skel.so
+odm/lib/rfsa/adsp/hta_lib/libhta_dsp_skel.so;MODULE_SUFFIX=_odm
 odm/lib/rfsa/adsp/libc++.so.1
 odm/lib/rfsa/adsp/libc++abi.so.1
-odm/lib/rfsa/adsp/libinterstellar_skel.so
+odm/lib/rfsa/adsp/libinterstellar_skel.so;MODULE_SUFFIX=_odm
 odm/lib/rfsa/adsp/libktvdrc.so
 odm/lib/rfsa/adsp/libktveffect.so
 odm/lib/rfsa/adsp/libktveq.so
@@ -122,8 +122,8 @@ odm/bin/vl53l1_daemon_main
 odm/etc/camera/fb_default
 odm/etc/camera/fwk_config.json
 odm/lib/libfastov_dsp.so
-odm/lib64/camera/components/com.qti.stats.pdlib.so
-odm/lib64/camera/components/libipebpsstriping.so
+odm/lib64/camera/components/com.qti.stats.pdlib.so;MODULE_SUFFIX=_odm
+odm/lib64/camera/components/libipebpsstriping.so;MODULE_SUFFIX=_odm
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigvideo.bin
@@ -209,27 +209,27 @@ vendor/lib64/libarcsoft_beautyshot_4.0.so;FIX_SONAME
 vendor/lib64/libarcsoft_calibverify_TriCamera.so
 vendor/lib64/libarcsoft_dualcam_bokeh_api.so
 vendor/lib64/libarcsoft_dualcam_refocus_left.so
-vendor/lib64/libarcsoft_dualcam_refocus_preview.so
+vendor/lib64/libarcsoft_dualcam_refocus_preview.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_dualcam_refocus_right.so
 vendor/lib64/libarcsoft_dualcam_refocus_uw.so
 vendor/lib64/libarcsoft_fringe_remove.so
 vendor/lib64/libarcsoft_hdr_couple_api.so
 vendor/lib64/libarcsoft_hdr_denoise_api.so
 vendor/lib64/libarcsoft_hdr_denoise_api_v4.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_high_dynamic_range_couple.so
-vendor/lib64/libarcsoft_high_dynamic_range_v4.so
-vendor/lib64/libarcsoft_hta.so
+vendor/lib64/libarcsoft_high_dynamic_range_v4.so;DISABLE_CHECKELF
+vendor/lib64/libarcsoft_hta.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_low_light_hdr.so
-vendor/lib64/libarcsoft_mfsr_frt.so
+vendor/lib64/libarcsoft_mfsr_frt.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libarcsoft_portrait_distortion_correction_20801.so;FIX_SONAME
 vendor/lib64/libarcsoft_smart_denoise.so
 vendor/lib64/libarcsoft_smart_denoise_v4.so
 vendor/lib64/libarcsoft_stripe_removal.so
-vendor/lib64/libarcsoft_super_night_raw.so
-vendor/lib64/libarcsoft_superportrait.so
+vendor/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF
+vendor/lib64/libarcsoft_superportrait.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_tricam_calibration.so
 vendor/lib64/libarcsoft_tricam_verification.so
 vendor/lib64/libarcsoft_video_fringing_correction.so
@@ -344,7 +344,7 @@ odm/firmware/fastchg/2169B/oplus_vooc_fw_rk826.bin
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
-vendor/bin/mutualex
+vendor/bin/mutualex;DISABLE_CHECKELF
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
@@ -378,12 +378,12 @@ vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/mutualex.rc
 vendor/lib/libxml.so
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
+vendor/lib64/libwqe.so;DISABLE_CHECKELF
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
@@ -421,18 +421,18 @@ vendor/etc/Oppo_QC_LTM_Commercial_SM8250_2020_01_15.pfm
 vendor/lib64/libhdr_tm.so
 
 # Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_CHECKELF
 vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libhistogram.so
+vendor/lib64/libhistogram.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
+vendor/lib64/libsdmcore.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libsdmutils.so
 
 # Display (SDM)
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libqseed3.so
-vendor/lib64/libsdedrm.so
+vendor/lib64/libsdedrm.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-diag.so
@@ -526,7 +526,7 @@ system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
 # DRM
@@ -645,7 +645,7 @@ odm/etc/sap.conf
 vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/mlid
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
@@ -732,7 +732,7 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc
@@ -783,7 +783,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -808,10 +808,10 @@ odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xm
 odm/lib64/libpwirisIoctlWrapper.so
 odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
-odm/lib64/libpwirisfeature.so
-odm/lib64/libpwirishalwrapper.so
+odm/lib64/libpwirisfeature.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm
 odm/lib64/libpwirispq.so
-odm/lib64/libpwirisservice.so
+odm/lib64/libpwirisservice.so;DISABLE_CHECKELF
 odm/lib64/libpwirissoft.so|e6fddaebca2981a09a46cf5397d47379b455228a|c0c3eb5df1210030190f634eceded4e3daff8506
 odm/lib64/libpwsnapdragoncolor.so
 odm/lib64/libpwsoftirisPCS.so
@@ -852,7 +852,7 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_kona.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/system_properties.xml
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 
 # Native public libraries
 vendor/etc/public.libraries.txt
@@ -885,8 +885,8 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxVpp.so
+vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
 vendor/lib64/libOmxAacDec.so
@@ -897,7 +897,7 @@ vendor/lib64/libOmxApeDec.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libOmxWmaDec.so
 
 # Osense
@@ -2574,7 +2574,7 @@ vendor/etc/ArmHDCP_QTI_Android.cfg
 vendor/etc/wfdconfig.xml
 vendor/lib/libFileMux_proprietary.so
 vendor/lib/libmm-hdcpmgr.so
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
@@ -2597,5 +2597,5 @@ vendor/lib/libwfduibcsinkinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
