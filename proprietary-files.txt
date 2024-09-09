@@ -831,11 +831,6 @@ odm/etc/media_codecs_c2.xml
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_kona.xml
-vendor/etc/media_codecs_kona_vendor.xml
-vendor/etc/media_codecs_performance_kona.xml
-vendor/etc/media_codecs_performance_kona_vendor.xml
 vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_kona.xml
