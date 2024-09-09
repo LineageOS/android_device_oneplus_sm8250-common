@@ -808,8 +808,6 @@ odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xm
 odm/lib64/libpwirisIoctlWrapper.so
 odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
-odm/lib64/libpwirisfeature.so
-odm/lib64/libpwirishalwrapper.so
 odm/lib64/libpwirispq.so
 odm/lib64/libpwirisservice.so
 odm/lib64/libpwirissoft.so|e6fddaebca2981a09a46cf5397d47379b455228a|c0c3eb5df1210030190f634eceded4e3daff8506
