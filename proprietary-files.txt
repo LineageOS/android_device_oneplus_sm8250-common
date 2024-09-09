@@ -815,6 +815,12 @@ vendor/lib64/libpwirishalwrapper.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+# Keymaster
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
+
 # Listen
 vendor/lib/hw/sound_trigger.primary.kona.so
 vendor/lib/libcapiv2svacnn.so
