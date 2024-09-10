@@ -34,6 +34,24 @@
       "parentUuid": "e9f9c893_6ad5b122",
       "revId": "21c6171414a2640e8697e89a6d022025466fe4b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13b1813f_fee1730d",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 424,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-09-10T10:53:07Z",
+      "side": 1,
+      "message": "oh yeah, this needs MAKE_COPY_RULE too...cause the module is declared in Android.mk and my build has now caf composer with dead fingerprint sensor.",
+      "parentUuid": "7979372d_3aa535e3",
+      "revId": "21c6171414a2640e8697e89a6d022025466fe4b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
