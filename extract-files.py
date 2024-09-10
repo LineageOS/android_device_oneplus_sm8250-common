@@ -18,6 +18,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_fingerprint.oplus.so'),
     'odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml': blob_fixup()
         .patch_file('blob-patches/manifest_oplus_fingerprint.patch'),
+    ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
+        .add_needed('libcrypto_shim.so'),
     'odm/lib64/libpwirissoft.so': blob_fixup()
         .sig_replace('72 1F 00 94', '1F 20 03 D5'),
     'product/app/PowerOffAlarm/PowerOffAlarm.apk': blob_fixup()
