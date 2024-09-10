@@ -84,6 +84,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${SIGSCAN}" -p "72 1F 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+        odm/lib64/libwvhidl.so|odm/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         product/app/PowerOffAlarm/PowerOffAlarm.apk)
             [ "$2" = "" ] && return 0
             apktool_patch "${2}" "${MY_DIR}/blob-patches/PowerOffAlarm.patch" -s
