@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b8916ea_4f20f918",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-10-11T21:30:13Z",
+      "side": 1,
+      "message": "bad libs installed:\n* vendor/lib64/libhistogram.so\n* vendor/lib64/libsdedrm.so\n* vendor/lib64/libsdmcore.so",
+      "revId": "1b4d4c33639045731278f3c97436f67cb60badc2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
