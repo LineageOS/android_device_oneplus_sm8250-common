@@ -136,7 +136,7 @@ odm/lib64/sensors.hal.tof.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
-vendor/lib/libnightvision.so
+vendor/lib/libnightvision.so;FIX_SONAME
 vendor/lib64/camera/components/com.oneplus.node.memcpy.so
 vendor/lib64/camera/components/com.oneplus.node.omoji.so
 vendor/lib64/camera/components/com.oneplus.node.preview.so
@@ -152,9 +152,9 @@ vendor/lib64/camera/components/com.qti.node.customhwnode.so
 vendor/lib64/camera/components/com.qti.node.depth.so
 vendor/lib64/camera/components/com.qti.node.dummyrtb.so
 vendor/lib64/camera/components/com.qti.node.dummysat.so
-vendor/lib64/camera/components/com.qti.node.eisv2.compass.so
+vendor/lib64/camera/components/com.qti.node.eisv2.compass.so;FIX_SONAME
 vendor/lib64/camera/components/com.qti.node.eisv2.so
-vendor/lib64/camera/components/com.qti.node.eisv3.compass.so
+vendor/lib64/camera/components/com.qti.node.eisv3.compass.so;FIX_SONAME
 vendor/lib64/camera/components/com.qti.node.eisv3.so
 vendor/lib64/camera/components/com.qti.node.fcv.so
 vendor/lib64/camera/components/com.qti.node.gpu.so
@@ -205,7 +205,7 @@ vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/libPolarrRender.so
 vendor/lib64/libarcsoft_beautyshot.so
-vendor/lib64/libarcsoft_beautyshot_4.0.so
+vendor/lib64/libarcsoft_beautyshot_4.0.so;FIX_SONAME
 vendor/lib64/libarcsoft_calibverify_TriCamera.so
 vendor/lib64/libarcsoft_dualcam_bokeh_api.so
 vendor/lib64/libarcsoft_dualcam_refocus_left.so
@@ -224,7 +224,7 @@ vendor/lib64/libarcsoft_hta.so
 vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libarcsoft_mfsr_frt.so
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
-vendor/lib64/libarcsoft_portrait_distortion_correction_20801.so
+vendor/lib64/libarcsoft_portrait_distortion_correction_20801.so;FIX_SONAME
 vendor/lib64/libarcsoft_smart_denoise.so
 vendor/lib64/libarcsoft_smart_denoise_v4.so
 vendor/lib64/libarcsoft_stripe_removal.so
@@ -246,7 +246,7 @@ vendor/lib64/libcamxncs.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
-vendor/lib64/libcamxtintlessalgo_21.so
+vendor/lib64/libcamxtintlessalgo_21.so;FIX_SONAME
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcvface_api.so
