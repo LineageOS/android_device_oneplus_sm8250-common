@@ -941,7 +941,7 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
 # Power-off alarm (system) - from IN2025 13.1.0.590(EX01)
-product/app/PowerOffAlarm/PowerOffAlarm.apk|5928b0a09b559a33f08ad2f04603a5c70fd3493b|20e879792a83ba488a9cfdf6273c970f670b7e35
+product/app/PowerOffAlarm/PowerOffAlarm.apk|5928b0a09b559a33f08ad2f04603a5c70fd3493b|a5128a721f3c8180d8988f4bddfc0fe51de29ce8
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|1cef4c9f6193022d8410e21513f36687cab0e0f2
 
 # Power-off alarm (vendor)

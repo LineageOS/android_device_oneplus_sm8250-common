@@ -20,46 +20,43 @@
 \ No newline at end of file
 --- a/res/values-ar-rXB/strings.xml
 +++ b/res/values-ar-rXB/strings.xml
-@@ -1,5 +1,6 @@
- <?xml version="1.0" encoding="utf-8"?>
+@@ -2,4 +2,5 @@
  <resources>
      <string name="app_name">‏‮PowerOffAlarm‬‏</string>
-+    <string name="permdesc_power_off_alarm">‏‮set‬‏ ‏‮and‬‏ ‏‮clear‬‏ ‏‮the‬‏ ‏‮alarm‬‏ ‏‮which‬‏ ‏‮will‬‏ ‏‮wake‬‏ ‏‮up‬‏ ‏‮device‬‏ ‏‮from‬‏ ‏‮the‬‏ ‏‮power‬‏ ‏‮off‬‏ ‏‮state‬‏</string>
      <string name="permlab_power_off_alarm">‏‮Power‬‏ ‏‮Off‬‏ ‏‮Alarm‬‏</string>
++    <string name="permdesc_power_off_alarm">‏‮set‬‏ ‏‮and‬‏ ‏‮clear‬‏ ‏‮the‬‏ ‏‮alarm‬‏ ‏‮which‬‏ ‏‮will‬‏ ‏‮wake‬‏ ‏‮up‬‏ ‏‮device‬‏ ‏‮from‬‏ ‏‮the‬‏ ‏‮power‬‏ ‏‮off‬‏ ‏‮state‬‏</string>
  </resources>
 --- a/res/values-en-rXA/strings.xml
 +++ b/res/values-en-rXA/strings.xml
-@@ -1,5 +1,6 @@
- <?xml version="1.0" encoding="utf-8"?>
+@@ -2,4 +2,5 @@
  <resources>
      <string name="app_name">[ÞöŵéŕÖƒƒÅļåŕḿ one two]</string>
-+    <string name="permdesc_power_off_alarm">[šéţ åñð çļéåŕ ţĥé åļåŕḿ ŵĥîçĥ ŵîļļ ŵåķé ûþ ðéVîçé ƒŕöḿ ţĥé þöŵéŕ öƒƒ šţåţé one two three four five six seven eight]</string>
      <string name="permlab_power_off_alarm">[Þöŵéŕ Öƒƒ Åļåŕḿ one two three]</string>
++    <string name="permdesc_power_off_alarm">[šéţ åñð çļéåŕ ţĥé åļåŕḿ ŵĥîçĥ ŵîļļ ŵåķé ûþ ðéVîçé ƒŕöḿ ţĥé þöŵéŕ öƒƒ šţåţé one two three four five six seven eight]</string>
  </resources>
 --- a/res/values-zh-rCN/strings.xml
 +++ b/res/values-zh-rCN/strings.xml
-@@ -1,5 +1,6 @@
- <?xml version="1.0" encoding="utf-8"?>
+@@ -2,4 +2,5 @@
  <resources>
      <string name="app_name">关机闹钟</string>
-+    <string name="permdesc_power_off_alarm">设置和清除关机闹钟时间（关机 闹钟可以唤醒在关机状态下的手机）</string>
      <string name="permlab_power_off_alarm">关机闹钟</string>
++    <string name="permdesc_power_off_alarm">设置和清除关机闹钟时间（关机 闹钟可以唤醒在关机状态下的手机）</string>
  </resources>
 --- a/res/values/public.xml
 +++ b/res/values/public.xml
-@@ -2,4 +2,5 @@
+@@ -2,4 +2,6 @@
  <resources>
      <public type="string" name="app_name" id="0x7f010000" />
      <public type="string" name="permlab_power_off_alarm" id="0x7f010001" />
 +    <public type="string" name="permdesc_power_off_alarm" id="0x7f010002" />
++    <public type="drawable" name="permic_power_off_alarm" id="0x7f020000" />
  </resources>
 \ No newline at end of file
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -1,5 +1,6 @@
- <?xml version="1.0" encoding="utf-8"?>
+@@ -2,4 +2,5 @@
  <resources>
      <string name="app_name">PowerOffAlarm</string>
-+    <string name="permdesc_power_off_alarm">set and clear the alarm which will wake up device from the power off state</string>
      <string name="permlab_power_off_alarm">Power Off Alarm</string>
++    <string name="permdesc_power_off_alarm">set and clear the alarm which will wake up device from the power off state</string>
  </resources>
