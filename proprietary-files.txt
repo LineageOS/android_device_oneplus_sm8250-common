@@ -2,7 +2,7 @@
 ## from OnePlus 8T (KB2005_14.0.0.601(EX01)).
 
 # ACDBs
-vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/adsp_avs_config.acdb;SYMLINK=odm/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP
 vendor/bin/adsprpcd
