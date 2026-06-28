@@ -22,7 +22,13 @@ prebuilt_etc {
     src: "init.oplus.hw.rc",
     sub_dir: "init",
     device_specific: true,
-    recovery_available: true,
+}
+
+prebuilt_etc {
+    name: "init.oplus.hw.recovery.rc",
+    src: "init.oplus.hw.rc",
+    sub_dir: "init",
+    recovery: true,
 }
 
 prebuilt_etc {
