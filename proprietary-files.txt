@@ -560,6 +560,19 @@ odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 odm/lib64/vendor.qti.esepowermanager@1.0.so
 odm/lib64/vendor.qti.esepowermanager@1.1.so
 
+# Face unlock
+my_product/non_overlay/priv-app/OPFaceUnlock/OPFaceUnlock.apk:vendor/etc/faceunlock/resources.zip
+odm/lib64/libstfaceunlockocl.so:vendor/lib64/libstfaceunlockocl.so
+odm/vendor/firmware_mnt/faceapp.b00:vendor/etc/faceunlock/faceapp.b00
+odm/vendor/firmware_mnt/faceapp.b01:vendor/etc/faceunlock/faceapp.b01
+odm/vendor/firmware_mnt/faceapp.b02:vendor/etc/faceunlock/faceapp.b02
+odm/vendor/firmware_mnt/faceapp.b03:vendor/etc/faceunlock/faceapp.b03
+odm/vendor/firmware_mnt/faceapp.b04:vendor/etc/faceunlock/faceapp.b04
+odm/vendor/firmware_mnt/faceapp.b05:vendor/etc/faceunlock/faceapp.b05
+odm/vendor/firmware_mnt/faceapp.b06:vendor/etc/faceunlock/faceapp.b06
+odm/vendor/firmware_mnt/faceapp.b07:vendor/etc/faceunlock/faceapp.b07
+odm/vendor/firmware_mnt/faceapp.mdt:vendor/etc/faceunlock/faceapp.mdt
+
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/bin/init.oplus.fingerprints.sh

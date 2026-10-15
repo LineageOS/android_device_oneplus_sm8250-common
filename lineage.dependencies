@@ -1,5 +1,9 @@
 [
   {
+    "repository": "android_hardware_oneplus",
+    "target_path": "hardware/oneplus"
+  },
+  {
     "repository": "android_hardware_oplus",
     "target_path": "hardware/oplus"
   },
