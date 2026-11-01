@@ -95,6 +95,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_fingerprint.oplus.so'),
     'odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml': blob_fixup()
         .patch_file('blob-patches/manifest_oplus_fingerprint.patch'),
+    'odm/etc/izat.conf': blob_fixup()
+        .patch_file('blob-patches/izat.patch'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'odm/lib64/libpwirissoft.so': blob_fixup()

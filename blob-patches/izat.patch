@@ -1,0 +1,11 @@
+--- a/izat.conf
++++ b/izat.conf
+@@ -178,7 +178,7 @@ WIFI_SUPPLICANT_INFO=BASIC
+ #3. 'all exclude XXXX' -> All basebands exclude XXXX. For example: all exclude sglte
+ PROCESS_NAME=lowi-server
+ PROCESS_ARGUMENT=
+-PROCESS_STATE=DISABLED
++PROCESS_STATE=ENABLED
+ PROCESS_GROUPS=gps wifi inet oem_2901
+ PREMIUM_FEATURE=0
+ IZAT_FEATURE_MASK=0xf303
